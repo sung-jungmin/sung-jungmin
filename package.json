@@ -1,0 +1,9 @@
+{
+  "name": "github-frontpage",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "fetch": "node scripts/fetch-contributions.js"
+  }
+}

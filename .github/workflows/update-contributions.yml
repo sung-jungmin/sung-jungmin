@@ -1,0 +1,43 @@
+name: Update Contribution Data
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # 03:00 UTC daily (12:00 KST)
+  workflow_dispatch:       # allow manual trigger from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/update-contributions.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch contribution data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_LOGIN: sung-jungmin
+        run: node scripts/fetch-contributions.js
+
+      - name: Generate SVG calendar
+        run: node scripts/generate-svg.js
+
+      - name: Commit updated data and SVG
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/contributions-2026.json assets/calendar-2026.svg
+          git diff --cached --quiet || git commit -m "chore: update contribution calendar [skip ci]"
+          git push
