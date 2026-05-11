@@ -34,10 +34,10 @@ jobs:
       - name: Generate SVG calendar
         run: node scripts/generate-svg.js
 
-      - name: Commit updated data and SVG
+      - name: Commit updated data and SVGs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/contributions-2026.json assets/calendar-2026.svg
-          git diff --cached --quiet || git commit -m "chore: update contribution calendar [skip ci]"
+          git add data/contributions-2026.json assets/*.svg
+          git diff --cached --quiet || git commit -m "chore: update profile data and SVGs [skip ci]"
           git push
