@@ -35,11 +35,11 @@
       dur="1s" repeatCount="indefinite" additive="sum"/>
   </path>
 </g>
-<text x="180" y="60" class="label">🔥 Current Streak</text>
+<text x="180" y="60" class="label">🔥 on a streak rn</text>
 <text x="180" y="115" class="big">3</text>
-<text x="180" y="140" class="range">days · May 7 – May 9</text>
+<text x="180" y="140" class="range">days locked in · May 7 – May 9</text>
 <line x1="380" y1="40" x2="380" y2="160" class="divider"/>
-<text x="405" y="60" class="label">⭐ Longest Streak</text>
+<text x="405" y="60" class="label">⭐ peak era</text>
 <text x="405" y="115" class="medium">4</text>
-<text x="405" y="140" class="range">days · Jan 23 – Jan 26</text>
+<text x="405" y="140" class="range">days of cooking · Jan 23 – Jan 26</text>
 </svg>
