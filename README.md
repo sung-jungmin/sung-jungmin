@@ -86,6 +86,18 @@
 
 <br />
 
+## 🎵 currently jamming to
+
+<sub>the soundtrack while i'm cooking commits · tap to vibe</sub>
+
+<p align="center">
+  <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn">
+    <img alt="currently jamming to Lofi Beats on Spotify" src="./assets/spotify.svg" />
+  </a>
+</p>
+
+<br />
+
 ---
 
 <p align="center">
