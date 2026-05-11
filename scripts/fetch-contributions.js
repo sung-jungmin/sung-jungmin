@@ -129,6 +129,35 @@ function calcStreaks(allDays) {
   return { current, currentStart, currentEnd, longest, longestStart, longestEnd };
 }
 
+function calcBests(allDays, months) {
+  let bestDay = null;
+  for (const d of allDays) {
+    if (d.count > 0 && (!bestDay || d.count > bestDay.count)) bestDay = d;
+  }
+  let bestMonth = null;
+  for (const m of months) {
+    if (!bestMonth || m.totalContributions > bestMonth.totalContributions) bestMonth = m;
+  }
+  let firstActivity = null;
+  for (const d of allDays) {
+    if (d.count > 0) { firstActivity = d; break; }
+  }
+  return {
+    bestDay: bestDay ? { date: bestDay.date, count: bestDay.count } : null,
+    bestMonth: bestMonth && bestMonth.totalContributions > 0
+      ? { month: bestMonth.month, name: bestMonth.name, count: bestMonth.totalContributions }
+      : null,
+    firstActivity: firstActivity ? { date: firstActivity.date, count: firstActivity.count } : null,
+  };
+}
+
+function calcYearProgress() {
+  const start = new Date('2026-01-01T00:00:00-05:00').getTime();
+  const end = new Date('2027-01-01T00:00:00-05:00').getTime();
+  const now = Math.min(Date.now(), end);
+  return Math.max(0, Math.min(100, ((now - start) / (end - start)) * 100));
+}
+
 function calcWeekdayDistribution(allDays) {
   // 7 buckets: Mon=0 ... Sun=6 in EST. Uses the same daily counts as the
   // calendar, so this covers EVERY contribution including private org commits.
@@ -163,6 +192,8 @@ async function main() {
   const allDays = flattenDays(months);
   const streak = calcStreaks(allDays);
   const weekdayDistribution = calcWeekdayDistribution(allDays);
+  const bests = calcBests(allDays, months);
+  const yearProgress = calcYearProgress();
 
   const output = {
     meta: {
@@ -180,6 +211,8 @@ async function main() {
     months,
     streak,
     weekdayDistribution,
+    bests,
+    yearProgress,
   };
 
   const dataDir = join(ROOT, 'data');

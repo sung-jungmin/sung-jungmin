@@ -26,6 +26,66 @@ function fmtEstDate(iso) {
   });
 }
 
+function fmtDate(yyyymmdd) {
+  if (!yyyymmdd) return '—';
+  const [y, m, d] = yyyymmdd.split('-');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${months[parseInt(m,10)-1]} ${parseInt(d,10)}`;
+}
+
+// ─────────────────────────── 0. STATS HERO ───────────────────────────
+function generateStatsHero() {
+  const WIDTH = 720, HEIGHT = 160;
+  const total = data.profile.totalContributions || 0;
+  const streak = data.streak ? data.streak.current : 0;
+  const wd = data.weekdayDistribution || [0,0,0,0,0,0,0];
+  let peakIdx = 0;
+  for (let i = 1; i < 7; i++) if (wd[i] > wd[peakIdx]) peakIdx = i;
+  const peakDay = wd[peakIdx] > 0 ? ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][peakIdx] : '—';
+  const progress = data.yearProgress || 0;
+
+  const p = [];
+  p.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" font-family="${FONT}">`);
+  p.push(`<style>
+.label{fill:#656d76;font-size:11px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase}
+.num{fill:#1a7f37;font-size:42px;font-weight:800;letter-spacing:-1px}
+.num-fire{fill:#FF8C42;font-size:42px;font-weight:800;letter-spacing:-1px}
+.num-text{fill:#1f2328;font-size:32px;font-weight:700;letter-spacing:-0.5px}
+.unit{fill:#656d76;font-size:11px}
+.progress-label{fill:#1f2328;font-size:11px;font-weight:600}
+.progress-pct{fill:#1a7f37;font-size:11px;font-weight:700}
+.bar-bg{fill:#ebedf0}
+.bar-fill{fill:#1a7f37}
+.divider{stroke:#d0d7de;stroke-width:1}
+@media (prefers-color-scheme: dark){
+.label{fill:#8b949e}.num{fill:#39d353}.num-text{fill:#e6edf3}
+.unit{fill:#8b949e}.progress-label{fill:#e6edf3}.progress-pct{fill:#39d353}
+.bar-bg{fill:#21262d}.bar-fill{fill:#39d353}.divider{stroke:#30363d}}
+</style>`);
+
+  // 3 stat columns
+  const cols = [
+    { x: 60,  label: `${total.toLocaleString()} W's in 2026`, value: total.toLocaleString(), valueClass: 'num', unit: 'total contributions' },
+    { x: 280, label: '🔥 on streak rn',      value: streak.toString(),       valueClass: 'num-fire', unit: streak === 1 ? 'day going' : 'days going' },
+    { x: 500, label: '📅 peak grind day',    value: peakDay,                 valueClass: 'num-text', unit: peakDay === '—' ? 'no data yet' : 'most active' },
+  ];
+  for (const c of cols) {
+    p.push(`<text x="${c.x}" y="40" class="label" text-anchor="middle">${escapeXml(c.label.toLowerCase())}</text>`);
+    p.push(`<text x="${c.x}" y="85" class="${c.valueClass}" text-anchor="middle">${escapeXml(c.value)}</text>`);
+    p.push(`<text x="${c.x}" y="105" class="unit" text-anchor="middle">${escapeXml(c.unit)}</text>`);
+  }
+
+  // Year progress bar
+  const barX = 60, barY = 128, barW = WIDTH - 120, barH = 8;
+  p.push(`<text x="${barX}" y="${barY - 6}" class="progress-label">📆 2026 progress</text>`);
+  p.push(`<text x="${barX + barW}" y="${barY - 6}" class="progress-pct" text-anchor="end">${progress.toFixed(1)}% complete</text>`);
+  p.push(`<rect x="${barX}" y="${barY}" width="${barW}" height="${barH}" rx="4" class="bar-bg"/>`);
+  p.push(`<rect x="${barX}" y="${barY}" width="${(progress/100) * barW}" height="${barH}" rx="4" class="bar-fill"/>`);
+
+  p.push('</svg>');
+  return p.join('\n');
+}
+
 // ─────────────────────────── 1. CALENDAR ───────────────────────────
 function generateCalendar() {
   const PAD = 30, CELL = 14, GAP = 3, STEP = CELL + GAP;
@@ -252,11 +312,158 @@ function generateActivity() {
   return p.join('\n');
 }
 
+// ─────────────────────────── 4. MONTHLY BAR CHART ───────────────────────────
+function generateMonthly() {
+  const months = data.months || [];
+  const max = Math.max(1, ...months.map(m => m.totalContributions || 0));
+  const total = months.reduce((s, m) => s + (m.totalContributions || 0), 0);
+
+  const WIDTH = 540, PAD = 24;
+  const HEAD_H = 56, ROW_H = 24, ROWS = 12, FOOT_H = 24;
+  const HEIGHT = PAD + HEAD_H + ROWS * ROW_H + FOOT_H + PAD;
+
+  const LABEL_W = 36;
+  const COUNT_W = 56;
+  const BAR_LEFT = PAD + LABEL_W;
+  const BAR_AREA = WIDTH - PAD - LABEL_W - COUNT_W - PAD;
+  const BAR_H = 12;
+
+  const getLevel = (c) => {
+    if (c === 0) return 0;
+    const r = c / max;
+    if (r <= 0.25) return 1;
+    if (r <= 0.50) return 2;
+    if (r <= 0.75) return 3;
+    return 4;
+  };
+
+  // Find best month
+  let bestIdx = 0;
+  for (let i = 1; i < months.length; i++) {
+    if ((months[i].totalContributions || 0) > (months[bestIdx].totalContributions || 0)) bestIdx = i;
+  }
+
+  const p = [];
+  p.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" font-family="${FONT}">`);
+  p.push(`<style>
+.title{fill:#1f2328;font-size:16px;font-weight:600}
+.subtitle{fill:#656d76;font-size:11px}
+.month-label{fill:#1f2328;font-size:11px;font-weight:600}
+.count{fill:#656d76;font-size:11px;font-weight:600}
+.bar-bg{fill:#ebedf0}
+.foot{fill:#8b949e;font-size:10px}
+.pct{fill:#1a7f37;font-size:11px;font-weight:600}
+.b0{fill:#ebedf0}.b1{fill:#9be9a8}.b2{fill:#40c463}.b3{fill:#30a14e}.b4{fill:#216e39}
+@media (prefers-color-scheme: dark){
+.title{fill:#e6edf3}.subtitle{fill:#8b949e}.month-label{fill:#e6edf3}.count{fill:#8b949e}
+.bar-bg{fill:#21262d}.foot{fill:#6e7681}.pct{fill:#39d353}
+.b0{fill:#21262d}.b1{fill:#0e4429}.b2{fill:#006d32}.b3{fill:#26a641}.b4{fill:#39d353}}
+</style>`);
+
+  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">📈 monthly grind chart</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${total.toLocaleString()} W's spread across the year · the longer the bar, the harder i went</text>`);
+
+  let y = PAD + HEAD_H;
+  for (const m of months) {
+    const cnt = m.totalContributions || 0;
+    const bw = max > 0 ? (cnt / max) * BAR_AREA : 0;
+    const lv = getLevel(cnt);
+    const cy = y + BAR_H + 2;
+
+    p.push(`<text x="${PAD + LABEL_W - 8}" y="${cy}" class="month-label" text-anchor="end">${escapeXml(m.name)}</text>`);
+    p.push(`<rect x="${BAR_LEFT}" y="${y + 4}" width="${BAR_AREA}" height="${BAR_H}" rx="3" class="bar-bg"/>`);
+    if (bw > 0.5) {
+      p.push(`<rect x="${BAR_LEFT}" y="${y + 4}" width="${bw}" height="${BAR_H}" rx="3" class="b${lv}"><title>${escapeXml(m.name)}: ${cnt} contributions</title></rect>`);
+    }
+    p.push(`<text x="${WIDTH - PAD}" y="${cy}" class="count" text-anchor="end">${cnt > 0 ? cnt : ''}</text>`);
+
+    y += ROW_H;
+  }
+
+  // Footer — best month callout
+  if (total > 0 && months[bestIdx]) {
+    p.push(`<text x="${PAD}" y="${y + 12}" class="foot">🏆 cooked the hardest in <tspan class="pct">${escapeXml(months[bestIdx].name)}</tspan> · ${months[bestIdx].totalContributions} contributions</text>`);
+  } else {
+    p.push(`<text x="${PAD}" y="${y + 12}" class="foot">no monthly data yet 💀</text>`);
+  }
+
+  p.push('</svg>');
+  return p.join('\n');
+}
+
+// ─────────────────────────── 5. PERSONAL BESTS ───────────────────────────
+function generateBests() {
+  const WIDTH = 720, HEIGHT = 130;
+  const b = data.bests || {};
+  const s = data.streak || { longest: 0, longestStart: null, longestEnd: null };
+
+  const cards = [
+    {
+      icon: '🏆',
+      label: 'best day',
+      value: b.bestDay ? `${b.bestDay.count}` : '—',
+      unit: b.bestDay ? `W's on ${fmtDate(b.bestDay.date)}` : 'no data yet',
+    },
+    {
+      icon: '📅',
+      label: 'best month',
+      value: b.bestMonth ? `${b.bestMonth.count}` : '—',
+      unit: b.bestMonth ? `in ${b.bestMonth.name}` : 'no data yet',
+    },
+    {
+      icon: '🔥',
+      label: 'record streak',
+      value: `${s.longest || 0}`,
+      unit: s.longest > 0 ? `day${s.longest === 1 ? '' : 's'} in a row` : 'no streak yet',
+    },
+    {
+      icon: '🚀',
+      label: 'first activity',
+      value: b.firstActivity ? fmtDate(b.firstActivity.date) : '—',
+      unit: b.firstActivity ? `kicked off 2026` : 'not started',
+    },
+  ];
+
+  const COLS = 4;
+  const GAP = 12;
+  const PAD = 16;
+  const CARD_W = (WIDTH - PAD * 2 - GAP * (COLS - 1)) / COLS;
+  const CARD_H = HEIGHT - PAD * 2;
+
+  const p = [];
+  p.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" font-family="${FONT}">`);
+  p.push(`<style>
+.card{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
+.card-icon{font-size:18px}
+.card-label{fill:#656d76;font-size:10px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.card-value{fill:#1f2328;font-size:24px;font-weight:800;letter-spacing:-0.5px}
+.card-unit{fill:#656d76;font-size:10px}
+@media (prefers-color-scheme: dark){
+.card{fill:#161b22;stroke:#30363d}.card-label{fill:#8b949e}.card-value{fill:#e6edf3}.card-unit{fill:#8b949e}}
+</style>`);
+
+  for (let i = 0; i < COLS; i++) {
+    const c = cards[i];
+    const x = PAD + i * (CARD_W + GAP);
+    p.push(`<rect x="${x}" y="${PAD}" width="${CARD_W}" height="${CARD_H}" rx="10" class="card"/>`);
+    p.push(`<text x="${x + 14}" y="${PAD + 28}" class="card-icon">${c.icon}</text>`);
+    p.push(`<text x="${x + 40}" y="${PAD + 28}" class="card-label">${escapeXml(c.label)}</text>`);
+    p.push(`<text x="${x + 14}" y="${PAD + 62}" class="card-value">${escapeXml(c.value)}</text>`);
+    p.push(`<text x="${x + 14}" y="${PAD + 82}" class="card-unit">${escapeXml(c.unit)}</text>`);
+  }
+
+  p.push('</svg>');
+  return p.join('\n');
+}
+
 // ─────────────────────────── WRITE ALL ───────────────────────────
 const outputs = [
+  ['stats-hero.svg', generateStatsHero()],
   ['calendar-2026.svg', generateCalendar()],
   ['streak.svg', generateStreak()],
+  ['monthly.svg', generateMonthly()],
   ['activity.svg', generateActivity()],
+  ['bests.svg', generateBests()],
 ];
 
 for (const [name, svg] of outputs) {
