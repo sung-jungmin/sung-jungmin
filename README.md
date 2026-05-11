@@ -46,22 +46,12 @@
 
 <br />
 
-## 💻 Languages by Commits
+## ⏰ My Activity Rhythm — Weekday × Hour
 
-<sub>Commits attributed to each repository's primary language. <em>Private repos without a detected language are excluded.</em></sub>
-
-<p align="center">
-  <img alt="Distribution of commits across programming languages" src="./assets/languages.svg" />
-</p>
-
-<br />
-
-## ⏰ My Coding Rhythm — Weekday × Hour
-
-<sub>When during the week am I most active? Darker cells = more commits in that day/hour bucket (EST).</sub>
+<sub>When during the week am I most active? Includes <strong>all contribution activity</strong> — commits, issues, PRs, and reviews. Darker cells = more activity in that day/hour bucket (EST).</sub>
 
 <p align="center">
-  <img alt="Heatmap of commits by day-of-week and hour-of-day in Eastern Time" src="./assets/heatmap.svg" />
+  <img alt="Heatmap of all contribution activity by day-of-week and hour-of-day in Eastern Time" src="./assets/heatmap.svg" />
 </p>
 
 <br />

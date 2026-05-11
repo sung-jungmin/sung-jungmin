@@ -36,6 +36,9 @@ async function graphql(query, variables) {
   return json.data;
 }
 
+// Main query — fetches calendar, commit-repos, and direct contribution timestamps
+// (issues, PRs, reviews) in a single request. Commit timestamps require a second
+// per-repository query because commits aren't returned with timestamps here.
 const QUERY_MAIN = `
 query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
@@ -54,13 +57,16 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
         }
       }
       commitContributionsByRepository(maxRepositories: 50) {
-        repository {
-          owner { login }
-          name
-          nameWithOwner
-          primaryLanguage { name color }
-        }
-        contributions { totalCount }
+        repository { owner { login } name }
+      }
+      issueContributions(first: 100) {
+        nodes { occurredAt }
+      }
+      pullRequestContributions(first: 100) {
+        nodes { occurredAt }
+      }
+      pullRequestReviewContributions(first: 100) {
+        nodes { occurredAt }
       }
     }
   }
@@ -112,17 +118,12 @@ function flattenDays(months) {
 function todayInEst() {
   return new Intl.DateTimeFormat('en-CA', {
     timeZone: TIMEZONE, year: 'numeric', month: '2-digit', day: '2-digit',
-  }).format(new Date()); // returns "YYYY-MM-DD"
+  }).format(new Date());
 }
 
 function calcStreaks(allDays) {
   const today = todayInEst();
-
-  // Current streak: walk backward from today, count consecutive non-zero days.
-  // If today is zero but yesterday wasn't, streak still ongoing (today not over yet).
-  let current = 0;
-  let currentStart = null;
-  let currentEnd = null;
+  let current = 0, currentStart = null, currentEnd = null;
   let foundFirstNonZero = false;
   for (let i = allDays.length - 1; i >= 0; i--) {
     const d = allDays[i];
@@ -134,11 +135,10 @@ function calcStreaks(allDays) {
       currentStart = d.date;
     } else {
       if (foundFirstNonZero) break;
-      if (d.date !== today) break; // zero day that isn't today → streak broken
+      if (d.date !== today) break;
     }
   }
 
-  // Longest streak: scan forward
   let longest = 0, longestStart = null, longestEnd = null;
   let runLen = 0, runStart = null, runEnd = null;
   for (const d of allDays) {
@@ -160,37 +160,11 @@ function calcStreaks(allDays) {
   return { current, currentStart, currentEnd, longest, longestStart, longestEnd };
 }
 
-function calcLanguages(commitContrib) {
-  const map = new Map();
-  let totalAttributed = 0;
-  let totalAll = 0;
-  for (const c of commitContrib) {
-    const count = c.contributions.totalCount;
-    totalAll += count;
-    const lang = c.repository.primaryLanguage;
-    if (!lang) continue;
-    totalAttributed += count;
-    const key = lang.name;
-    if (!map.has(key)) {
-      map.set(key, { name: lang.name, color: lang.color || '#888888', commits: 0 });
-    }
-    map.get(key).commits += count;
-  }
-  const sorted = [...map.values()].sort((a, b) => b.commits - a.commits);
-  for (const l of sorted) {
-    l.percentage = totalAttributed > 0 ? (l.commits / totalAttributed) * 100 : 0;
-  }
-  return { totalAttributed, totalAll, languages: sorted };
-}
-
 function calcHeatmap(timestamps) {
-  // 7 rows (Mon=0 .. Sun=6) × 24 hours, counts in EST
+  // 7 rows (Mon=0 .. Sun=6) × 24 hours, bucketed in EST
   const grid = Array.from({ length: 7 }, () => Array(24).fill(0));
   const fmt = new Intl.DateTimeFormat('en-US', {
-    timeZone: TIMEZONE,
-    weekday: 'short',
-    hour: 'numeric',
-    hour12: false,
+    timeZone: TIMEZONE, weekday: 'short', hour: 'numeric', hour12: false,
   });
   const weekdayMap = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
   for (const ts of timestamps) {
@@ -214,7 +188,7 @@ async function main() {
   const now = new Date();
   const to = (now < yearEnd ? now : yearEnd).toISOString();
 
-  // Step 1: main query
+  // Step 1: main query (calendar + non-commit contribution timestamps + repo list)
   const data = await graphql(QUERY_MAIN, { login: TARGET_LOGIN, from, to });
   const user = data.user;
   const cc = user.contributionsCollection;
@@ -222,29 +196,38 @@ async function main() {
   const months = transformMonths(cc.contributionCalendar.weeks);
   const allDays = flattenDays(months);
   const streak = calcStreaks(allDays);
-  const langData = calcLanguages(cc.commitContributionsByRepository);
 
-  // Step 2: fetch commit timestamps for heatmap
-  let heatmap = null;
+  // Collect all contribution timestamps: issues + PRs + reviews from main query.
+  const activityTimestamps = [];
+  const issueCount = cc.issueContributions.nodes.length;
+  const prCount = cc.pullRequestContributions.nodes.length;
+  const reviewCount = cc.pullRequestReviewContributions.nodes.length;
+  for (const n of cc.issueContributions.nodes) activityTimestamps.push(n.occurredAt);
+  for (const n of cc.pullRequestContributions.nodes) activityTimestamps.push(n.occurredAt);
+  for (const n of cc.pullRequestReviewContributions.nodes) activityTimestamps.push(n.occurredAt);
+
+  // Step 2: per-repo history query for commit timestamps.
+  let commitCount = 0;
   const repos = cc.commitContributionsByRepository.filter(r => r.repository && r.repository.owner);
   if (repos.length > 0) {
     try {
       const historyQuery = buildHistoryQuery(repos);
       const histData = await graphql(historyQuery, { userId: user.id, from, to });
-      const timestamps = [];
       for (const key of Object.keys(histData)) {
         const repo = histData[key];
         const nodes = repo && repo.defaultBranchRef && repo.defaultBranchRef.target
           ? repo.defaultBranchRef.target.history.nodes : [];
-        for (const n of nodes) timestamps.push(n.committedDate);
+        for (const n of nodes) {
+          activityTimestamps.push(n.committedDate);
+          commitCount++;
+        }
       }
-      heatmap = calcHeatmap(timestamps);
-      console.log(`Fetched ${timestamps.length} commit timestamps for heatmap`);
     } catch (err) {
-      console.error('Warning: heatmap query failed:', err.message);
-      heatmap = null;
+      console.error('Warning: commit history query failed:', err.message);
     }
   }
+
+  const heatmap = calcHeatmap(activityTimestamps);
 
   const output = {
     meta: {
@@ -259,14 +242,16 @@ async function main() {
       avatarUrl: user.avatarUrl,
       totalContributions: cc.contributionCalendar.totalContributions,
     },
-    months,
-    languages: langData.languages,
-    languageStats: {
-      totalAttributed: langData.totalAttributed,
-      totalAll: langData.totalAll,
+    activitySummary: {
+      commits: commitCount,
+      issues: issueCount,
+      pullRequests: prCount,
+      reviews: reviewCount,
+      bucketed: activityTimestamps.length,
     },
+    months,
     streak,
-    heatmap: heatmap || Array.from({ length: 7 }, () => Array(24).fill(0)),
+    heatmap,
   };
 
   const dataDir = join(ROOT, 'data');
@@ -274,7 +259,12 @@ async function main() {
   const outPath = join(dataDir, 'contributions-2026.json');
   writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8');
 
-  console.log(`Updated: ${output.profile.totalContributions} contributions · ${output.languages.length} languages · streak ${streak.current}/${streak.longest}`);
+  console.log(
+    `Updated: ${output.profile.totalContributions} contributions · ` +
+    `activity timestamps bucketed: ${activityTimestamps.length} ` +
+    `(commits=${commitCount}, issues=${issueCount}, PRs=${prCount}, reviews=${reviewCount}) · ` +
+    `streak ${streak.current}/${streak.longest}`
+  );
 }
 
 main().catch((err) => {

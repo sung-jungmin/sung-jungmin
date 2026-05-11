@@ -91,68 +91,7 @@ function generateCalendar() {
   return p.join('\n');
 }
 
-// ─────────────────────────── 2. LANGUAGES ───────────────────────────
-function generateLanguages() {
-  const PAD = 24;
-  const ROW_H = 24;
-  const BAR_H = 10;
-  const WIDTH = 540;
-  const langs = (data.languages || []).slice(0, 8);
-  const total = langs.reduce((s, l) => s + l.commits, 0);
-  const HEAD_H = 70;
-  const HEIGHT = PAD + HEAD_H + (langs.length || 1) * ROW_H + PAD;
-
-  const p = [];
-  p.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" font-family="${FONT}">`);
-  p.push(`<style>
-.title{fill:#1f2328;font-size:16px;font-weight:600}
-.subtitle{fill:#656d76;font-size:11px}
-.lang-name{fill:#1f2328;font-size:12px;font-weight:600}
-.lang-count{fill:#656d76;font-size:11px}
-.lang-pct{fill:#1f2328;font-size:11px;font-weight:600}
-.bar-bg{fill:#ebedf0}
-@media (prefers-color-scheme: dark){
-.title{fill:#e6edf3}.subtitle{fill:#8b949e}.lang-name{fill:#e6edf3}
-.lang-count{fill:#8b949e}.lang-pct{fill:#e6edf3}.bar-bg{fill:#21262d}}
-</style>`);
-
-  // Header
-  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">📊 Languages by Commits</text>`);
-  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${total.toLocaleString()} commits across ${langs.length} language${langs.length === 1 ? '' : 's'}</text>`);
-
-  // Stacked bar
-  const barY = PAD + 44;
-  const barW = WIDTH - PAD * 2;
-  p.push(`<rect x="${PAD}" y="${barY}" width="${barW}" height="${BAR_H}" rx="5" class="bar-bg"/>`);
-  let cursor = 0;
-  for (const l of langs) {
-    const w = (l.percentage / 100) * barW;
-    if (w > 0.5) {
-      p.push(`<rect x="${PAD + cursor}" y="${barY}" width="${w}" height="${BAR_H}" rx="0" fill="${l.color}"/>`);
-    }
-    cursor += w;
-  }
-
-  // Rows
-  if (langs.length === 0) {
-    p.push(`<text x="${PAD}" y="${PAD + HEAD_H + 16}" class="subtitle">No language data yet — will populate after first workflow run.</text>`);
-  } else {
-    let rowY = PAD + HEAD_H;
-    for (const l of langs) {
-      const cy = rowY + 8;
-      p.push(`<circle cx="${PAD + 6}" cy="${cy}" r="5" fill="${l.color}"/>`);
-      p.push(`<text x="${PAD + 18}" y="${cy + 4}" class="lang-name">${escapeXml(l.name)}</text>`);
-      p.push(`<text x="${WIDTH - PAD - 70}" y="${cy + 4}" class="lang-count" text-anchor="end">${l.commits} commit${l.commits === 1 ? '' : 's'}</text>`);
-      p.push(`<text x="${WIDTH - PAD}" y="${cy + 4}" class="lang-pct" text-anchor="end">${l.percentage.toFixed(1)}%</text>`);
-      rowY += ROW_H;
-    }
-  }
-
-  p.push('</svg>');
-  return p.join('\n');
-}
-
-// ─────────────────────────── 3. STREAK 🔥 ───────────────────────────
+// ─────────────────────────── 2. STREAK 🔥 ───────────────────────────
 function generateStreak() {
   const WIDTH = 540, HEIGHT = 200;
   const s = data.streak || { current: 0, longest: 0, currentStart: null, currentEnd: null, longestStart: null, longestEnd: null };
@@ -224,7 +163,7 @@ function generateStreak() {
   return p.join('\n');
 }
 
-// ─────────────────────────── 4. HEATMAP ───────────────────────────
+// ─────────────────────────── 3. HEATMAP ───────────────────────────
 function generateHeatmap() {
   const grid = data.heatmap || Array.from({ length: 7 }, () => Array(24).fill(0));
   const max = Math.max(1, ...grid.flat());
@@ -265,9 +204,9 @@ function generateHeatmap() {
 </style>`);
 
   // Header
-  const totalCommits = grid.flat().reduce((s, v) => s + v, 0);
-  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">⏰ When I commit · weekday × hour (EST)</text>`);
-  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${totalCommits} commit${totalCommits === 1 ? '' : 's'} bucketed by day-of-week and hour-of-day in Eastern Time</text>`);
+  const totalActions = grid.flat().reduce((s, v) => s + v, 0);
+  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">⏰ When I'm active · weekday × hour (EST)</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${totalActions} contribution${totalActions === 1 ? '' : 's'} (commits, issues, PRs, reviews) bucketed by EST day-of-week × hour</text>`);
 
   // Hour labels (show every 3 hours)
   const gridLeft = PAD + LABEL_W;
@@ -286,7 +225,7 @@ function generateHeatmap() {
       const x = gridLeft + h * (CELL_W + GAP);
       const v = grid[r][h];
       const lv = getLevel(v);
-      p.push(`<rect x="${x}" y="${y}" width="${CELL_W}" height="${CELL_H}" rx="2" class="h${lv}"><title>${dayNames[r]} ${h}:00 — ${v} commit${v === 1 ? '' : 's'}</title></rect>`);
+      p.push(`<rect x="${x}" y="${y}" width="${CELL_W}" height="${CELL_H}" rx="2" class="h${lv}"><title>${dayNames[r]} ${h}:00 — ${v} contribution${v === 1 ? '' : 's'}</title></rect>`);
     }
   }
 
@@ -299,7 +238,7 @@ function generateHeatmap() {
     lx += 16;
   }
   p.push(`<text x="${lx + 2}" y="${footY}" class="foot">More</text>`);
-  p.push(`<text x="${WIDTH - PAD}" y="${footY}" class="foot" text-anchor="end">peak: ${max} commit${max === 1 ? '' : 's'} in one hour</text>`);
+  p.push(`<text x="${WIDTH - PAD}" y="${footY}" class="foot" text-anchor="end">peak: ${max} contribution${max === 1 ? '' : 's'} in one hour</text>`);
 
   p.push('</svg>');
   return p.join('\n');
@@ -308,7 +247,6 @@ function generateHeatmap() {
 // ─────────────────────────── WRITE ALL ───────────────────────────
 const outputs = [
   ['calendar-2026.svg', generateCalendar()],
-  ['languages.svg', generateLanguages()],
   ['streak.svg', generateStreak()],
   ['heatmap.svg', generateHeatmap()],
 ];
