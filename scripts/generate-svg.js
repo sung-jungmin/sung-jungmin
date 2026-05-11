@@ -412,9 +412,16 @@ function generateBests() {
     },
     {
       icon: '🔥',
-      label: 'record streak',
+      label: 'streak',
       value: `${s.longest || 0}`,
-      unit: s.longest > 0 ? `day${s.longest === 1 ? '' : 's'} in a row` : 'no streak yet',
+      unit: (() => {
+        if (s.longest === 0 && (s.current || 0) === 0) return 'no streak yet';
+        const maxLabel = `day${s.longest === 1 ? '' : 's'} max`;
+        if ((s.current || 0) > 0) {
+          return `${maxLabel} · 🔥 ${s.current} active rn`;
+        }
+        return `${maxLabel} · cooling off`;
+      })(),
     },
     {
       icon: '🚀',
@@ -460,7 +467,6 @@ function generateBests() {
 const outputs = [
   ['stats-hero.svg', generateStatsHero()],
   ['calendar-2026.svg', generateCalendar()],
-  ['streak.svg', generateStreak()],
   ['monthly.svg', generateMonthly()],
   ['activity.svg', generateActivity()],
   ['bests.svg', generateBests()],

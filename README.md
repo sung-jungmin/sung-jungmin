@@ -18,6 +18,16 @@
 
 <br />
 
+## 🏆 personal bests
+
+<sub>flex zone · the highlights reel of 2026 so far · streak shows max record + current active</sub>
+
+<p align="center">
+  <img alt="personal best stats: best day, best month, streak (record + current), first activity" src="./assets/bests.svg" />
+</p>
+
+<br />
+
 ## 🐍 the snake era
 
 <sub>watch my commits get devoured · classic move, never gets old</sub>
@@ -32,36 +42,6 @@
 
 <br />
 
-## 📊 my 2026 · vertical era
-
-<sub>full-year scoreboard 💚 · each row = a month, each cell = a day, darker hits = more commits · iykyk</sub>
-
-<p align="center">
-  <img alt="2026 contribution calendar — vertical layout, auto-updated daily" src="./assets/calendar-2026.svg" />
-</p>
-
-<br />
-
-## 🔥 streak check
-
-<sub>consecutive days locked in 🥵 · the flame hits harder the longer it goes</sub>
-
-<p align="center">
-  <img alt="current and longest contribution streaks · animated" src="./assets/streak.svg" />
-</p>
-
-<br />
-
-## 📈 monthly grind chart
-
-<sub>which months did i go feral · jan→dec at a glance</sub>
-
-<p align="center">
-  <img alt="monthly contribution totals from january to december" src="./assets/monthly.svg" />
-</p>
-
-<br />
-
 ## 📅 when i actually lock in
 
 <sub>which weekday do i grind hardest? every contribution counted (commits + issues + PRs + reviews) — private org repos too, <strong>no cap</strong>. bucketed by EST weekday.</sub>
@@ -72,12 +52,13 @@
 
 <br />
 
-## 🏆 personal bests
+## 📊 my 2026 era · two angles
 
-<sub>flex zone · the highlights reel of 2026 so far</sub>
+<sub>vertical scoreboard (left) meets monthly bars (right) · same year, two flavors</sub>
 
 <p align="center">
-  <img alt="personal best stats: best day, best month, record streak, first activity" src="./assets/bests.svg" />
+  <img alt="2026 vertical calendar — day by day, jan to dec" src="./assets/calendar-2026.svg" width="55%" />
+  <img alt="monthly grind chart — month-level totals" src="./assets/monthly.svg" width="40%" />
 </p>
 
 <br />
