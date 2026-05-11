@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-11T00:19:06.665Z",
+    "generatedAt": "2026-05-11T00:31:00.024Z",
     "year": 2026,
     "login": "sung-jungmin",
     "timezone": "America/New_York"
@@ -9,7 +9,14 @@
     "name": "Jungmin Sung",
     "login": "sung-jungmin",
     "avatarUrl": "https://avatars.githubusercontent.com/u/105564849?v=4",
-    "totalContributions": 133
+    "totalContributions": 137
+  },
+  "activitySummary": {
+    "commits": 0,
+    "issues": 0,
+    "pullRequests": 0,
+    "reviews": 0,
+    "bucketed": 0
   },
   "months": [
     {
@@ -523,7 +530,7 @@
     {
       "month": 5,
       "name": "May",
-      "totalContributions": 43,
+      "totalContributions": 47,
       "days": [
         {
           "date": "2026-05-01",
@@ -563,7 +570,7 @@
         },
         {
           "date": "2026-05-10",
-          "count": 21
+          "count": 25
         },
         {
           "date": "2026-05-11",
@@ -614,18 +621,6 @@
       "days": []
     }
   ],
-  "languages": [
-    {
-      "name": "JavaScript",
-      "color": "#f1e05a",
-      "commits": 4,
-      "percentage": 100
-    }
-  ],
-  "languageStats": {
-    "totalAttributed": 4,
-    "totalAll": 4
-  },
   "streak": {
     "current": 3,
     "currentStart": "2026-05-08",
