@@ -1,173 +1,173 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="696" height="360" viewBox="0 0 696 360" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="368" viewBox="0 0 700 368" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
-.title{fill:#1f2328;font-size:18px;font-weight:600}
-.subtitle{fill:#1a7f37;font-size:13px;font-weight:600}
-.muted{fill:#656d76;font-size:11px}
-.daynum{fill:#afb8c1;font-size:9px}
-.month-label{fill:#656d76;font-size:11px;font-weight:600}
-.month-count{fill:#1a7f37;font-size:11px;font-weight:600}
-.c0{fill:#ebedf0}.c1{fill:#9be9a8}.c2{fill:#40c463}.c3{fill:#30a14e}.c4{fill:#216e39}
+.title{fill:#181818;font-size:20px;font-weight:400;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif;letter-spacing:-0.5px}
+.subtitle{fill:#CC785C;font-size:13px;font-weight:600}
+.muted{fill:#5A574E;font-size:10px}
+.daynum{fill:#A19E92;font-size:9px}
+.month-label{fill:#5A574E;font-size:11px;font-weight:600}
+.month-count{fill:#CC785C;font-size:11px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.c0{fill:#EEE9DC}.c1{fill:#F0D5B4}.c2{fill:#E5B388}.c3{fill:#CC785C}.c4{fill:#A85A3F}
 @media (prefers-color-scheme: dark){
-.title{fill:#e6edf3}.subtitle{fill:#39d353}.muted{fill:#8b949e}.daynum{fill:#484f58}
-.month-label{fill:#8b949e}.month-count{fill:#39d353}
-.c0{fill:#161b22}.c1{fill:#0e4429}.c2{fill:#006d32}.c3{fill:#26a641}.c4{fill:#39d353}}
+.title{fill:#F0EEE6}.subtitle{fill:#E5947A}.muted{fill:#A19E92}.daynum{fill:#5A574E}
+.month-label{fill:#A19E92}.month-count{fill:#E5947A}
+.c0{fill:#26241F}.c1{fill:#3D2E22}.c2{fill:#7A4A33}.c3{fill:#CC785C}.c4{fill:#E5947A}}
 </style>
-<text x="30" y="48" class="title">2026 · vertical lock-in 📅</text>
-<text x="30" y="70" class="subtitle">156 W's · @sung-jungmin</text>
-<text x="81" y="97" class="daynum" text-anchor="middle">1</text>
-<text x="166" y="97" class="daynum" text-anchor="middle">6</text>
-<text x="251" y="97" class="daynum" text-anchor="middle">11</text>
-<text x="336" y="97" class="daynum" text-anchor="middle">16</text>
-<text x="421" y="97" class="daynum" text-anchor="middle">21</text>
-<text x="506" y="97" class="daynum" text-anchor="middle">26</text>
-<text x="591" y="97" class="daynum" text-anchor="middle">31</text>
-<text x="66" y="115" class="month-label" text-anchor="end">Jan</text>
-<rect x="74" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="91" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="108" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="125" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="142" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="159" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="176" y="104" width="14" height="14" rx="2" class="c3"/>
-<rect x="193" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="210" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="227" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="244" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="261" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="278" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="295" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="312" y="104" width="14" height="14" rx="2" class="c1"/>
-<rect x="329" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="346" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="363" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="380" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="397" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="414" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="431" y="104" width="14" height="14" rx="2" class="c4"/>
-<rect x="448" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="465" y="104" width="14" height="14" rx="2" class="c3"/>
-<rect x="482" y="104" width="14" height="14" rx="2" class="c3"/>
-<rect x="499" y="104" width="14" height="14" rx="2" class="c2"/>
-<rect x="516" y="104" width="14" height="14" rx="2" class="c1"/>
-<rect x="533" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="550" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="567" y="104" width="14" height="14" rx="2" class="c0"/>
-<rect x="584" y="104" width="14" height="14" rx="2" class="c0"/>
-<text x="604" y="115" class="month-count">74</text>
-<text x="66" y="132" class="month-label" text-anchor="end">Feb</text>
-<rect x="74" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="91" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="108" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="125" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="142" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="159" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="176" y="121" width="14" height="14" rx="2" class="c3"/>
-<rect x="193" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="210" y="121" width="14" height="14" rx="2" class="c1"/>
-<rect x="227" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="244" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="261" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="278" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="295" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="312" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="329" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="346" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="363" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="380" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="397" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="414" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="431" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="448" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="465" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="482" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="499" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="516" y="121" width="14" height="14" rx="2" class="c0"/>
-<rect x="533" y="121" width="14" height="14" rx="2" class="c0"/>
-<text x="604" y="132" class="month-count">11</text>
-<text x="66" y="149" class="month-label" text-anchor="end">Mar</text>
-<rect x="74" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="91" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="108" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="125" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="142" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="159" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="176" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="193" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="210" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="227" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="244" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="261" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="278" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="295" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="312" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="329" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="346" y="138" width="14" height="14" rx="2" class="c1"/>
-<rect x="363" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="380" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="397" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="414" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="431" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="448" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="465" y="138" width="14" height="14" rx="2" class="c1"/>
-<rect x="482" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="499" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="516" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="533" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="550" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="567" y="138" width="14" height="14" rx="2" class="c0"/>
-<rect x="584" y="138" width="14" height="14" rx="2" class="c0"/>
-<text x="604" y="149" class="month-count">2</text>
-<text x="66" y="166" class="month-label" text-anchor="end">Apr</text>
-<rect x="74" y="155" width="14" height="14" rx="2" class="c1"/>
-<rect x="91" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="108" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="125" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="142" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="159" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="176" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="193" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="210" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="227" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="244" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="261" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="278" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="295" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="312" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="329" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="346" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="363" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="380" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="397" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="414" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="431" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="448" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="465" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="482" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="499" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="516" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="533" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="550" y="155" width="14" height="14" rx="2" class="c0"/>
-<rect x="567" y="155" width="14" height="14" rx="2" class="c0"/>
-<text x="604" y="166" class="month-count">3</text>
-<text x="66" y="183" class="month-label" text-anchor="end">May</text>
-<rect x="74" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="91" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="108" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="125" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="142" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="159" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="176" y="172" width="14" height="14" rx="2" class="c0"/>
-<rect x="193" y="172" width="14" height="14" rx="2" class="c1"/>
-<rect x="210" y="172" width="14" height="14" rx="2" class="c4"/>
-<rect x="227" y="172" width="14" height="14" rx="2" class="c4"/>
-<rect x="244" y="172" width="14" height="14" rx="2" class="c1"/>
-<text x="604" y="183" class="month-count">66</text>
-<text x="66" y="200" class="month-label" text-anchor="end">Jun</text>
-<text x="66" y="217" class="month-label" text-anchor="end">Jul</text>
-<text x="66" y="234" class="month-label" text-anchor="end">Aug</text>
-<text x="66" y="251" class="month-label" text-anchor="end">Sep</text>
-<text x="66" y="268" class="month-label" text-anchor="end">Oct</text>
-<text x="66" y="285" class="month-label" text-anchor="end">Nov</text>
-<text x="66" y="302" class="month-label" text-anchor="end">Dec</text>
-<text x="30" y="334" class="muted">↻ glow-up: May 11, 2026 (EST) · daily refresh fr</text>
+<text x="32" y="52" class="title">2026 · vertical lock-in</text>
+<text x="32" y="74" class="subtitle">156 W's · @sung-jungmin</text>
+<text x="83" y="103" class="daynum" text-anchor="middle">1</text>
+<text x="168" y="103" class="daynum" text-anchor="middle">6</text>
+<text x="253" y="103" class="daynum" text-anchor="middle">11</text>
+<text x="338" y="103" class="daynum" text-anchor="middle">16</text>
+<text x="423" y="103" class="daynum" text-anchor="middle">21</text>
+<text x="508" y="103" class="daynum" text-anchor="middle">26</text>
+<text x="593" y="103" class="daynum" text-anchor="middle">31</text>
+<text x="68" y="121" class="month-label" text-anchor="end">Jan</text>
+<rect x="76" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="93" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="110" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="127" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="144" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="161" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="178" y="110" width="14" height="14" rx="2" class="c3"/>
+<rect x="195" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="212" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="229" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="246" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="263" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="280" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="297" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="314" y="110" width="14" height="14" rx="2" class="c1"/>
+<rect x="331" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="348" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="365" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="382" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="399" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="416" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="433" y="110" width="14" height="14" rx="2" class="c4"/>
+<rect x="450" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="467" y="110" width="14" height="14" rx="2" class="c3"/>
+<rect x="484" y="110" width="14" height="14" rx="2" class="c3"/>
+<rect x="501" y="110" width="14" height="14" rx="2" class="c2"/>
+<rect x="518" y="110" width="14" height="14" rx="2" class="c1"/>
+<rect x="535" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="552" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="569" y="110" width="14" height="14" rx="2" class="c0"/>
+<rect x="586" y="110" width="14" height="14" rx="2" class="c0"/>
+<text x="606" y="121" class="month-count">74</text>
+<text x="68" y="138" class="month-label" text-anchor="end">Feb</text>
+<rect x="76" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="93" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="110" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="127" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="144" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="161" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="178" y="127" width="14" height="14" rx="2" class="c3"/>
+<rect x="195" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="212" y="127" width="14" height="14" rx="2" class="c1"/>
+<rect x="229" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="246" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="263" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="280" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="297" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="314" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="331" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="348" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="365" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="382" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="399" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="416" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="433" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="450" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="467" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="484" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="501" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="518" y="127" width="14" height="14" rx="2" class="c0"/>
+<rect x="535" y="127" width="14" height="14" rx="2" class="c0"/>
+<text x="606" y="138" class="month-count">11</text>
+<text x="68" y="155" class="month-label" text-anchor="end">Mar</text>
+<rect x="76" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="93" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="110" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="127" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="144" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="161" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="178" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="195" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="212" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="229" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="246" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="263" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="280" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="297" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="314" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="331" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="348" y="144" width="14" height="14" rx="2" class="c1"/>
+<rect x="365" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="382" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="399" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="416" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="433" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="450" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="467" y="144" width="14" height="14" rx="2" class="c1"/>
+<rect x="484" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="501" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="518" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="535" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="552" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="569" y="144" width="14" height="14" rx="2" class="c0"/>
+<rect x="586" y="144" width="14" height="14" rx="2" class="c0"/>
+<text x="606" y="155" class="month-count">2</text>
+<text x="68" y="172" class="month-label" text-anchor="end">Apr</text>
+<rect x="76" y="161" width="14" height="14" rx="2" class="c1"/>
+<rect x="93" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="110" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="127" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="144" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="161" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="178" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="195" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="212" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="229" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="246" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="263" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="280" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="297" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="314" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="331" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="348" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="365" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="382" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="399" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="416" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="433" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="450" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="467" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="484" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="501" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="518" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="535" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="552" y="161" width="14" height="14" rx="2" class="c0"/>
+<rect x="569" y="161" width="14" height="14" rx="2" class="c0"/>
+<text x="606" y="172" class="month-count">3</text>
+<text x="68" y="189" class="month-label" text-anchor="end">May</text>
+<rect x="76" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="93" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="110" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="127" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="144" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="161" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="178" y="178" width="14" height="14" rx="2" class="c0"/>
+<rect x="195" y="178" width="14" height="14" rx="2" class="c1"/>
+<rect x="212" y="178" width="14" height="14" rx="2" class="c4"/>
+<rect x="229" y="178" width="14" height="14" rx="2" class="c4"/>
+<rect x="246" y="178" width="14" height="14" rx="2" class="c1"/>
+<text x="606" y="189" class="month-count">66</text>
+<text x="68" y="206" class="month-label" text-anchor="end">Jun</text>
+<text x="68" y="223" class="month-label" text-anchor="end">Jul</text>
+<text x="68" y="240" class="month-label" text-anchor="end">Aug</text>
+<text x="68" y="257" class="month-label" text-anchor="end">Sep</text>
+<text x="68" y="274" class="month-label" text-anchor="end">Oct</text>
+<text x="68" y="291" class="month-label" text-anchor="end">Nov</text>
+<text x="68" y="308" class="month-label" text-anchor="end">Dec</text>
+<text x="32" y="340" class="muted">↻ refreshed May 11, 2026 (EST) · daily glow-up</text>
 </svg>
