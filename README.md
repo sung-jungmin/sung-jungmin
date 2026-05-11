@@ -17,6 +17,18 @@
 <br />
 
 <p align="center">
+  <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn" target="_blank">
+    <img alt="my coding playlist · click to open in spotify" src="./assets/spotify.svg" />
+  </a>
+</p>
+
+<p align="center">
+  <sub>↗ opens spotify · github readmes can't embed real players (it's a github limitation, not a skill issue 💀)</sub>
+</p>
+
+<br />
+
+<p align="center">
   <img alt="stats at a glance" src="./assets/stats-hero.svg" />
 </p>
 
@@ -82,18 +94,6 @@
 
 <p align="center">
   <img alt="personal best stats: best day, best month, record streak, first activity" src="./assets/bests.svg" />
-</p>
-
-<br />
-
-## 🎵 currently jamming to
-
-<sub>the soundtrack while i'm cooking commits · tap to vibe</sub>
-
-<p align="center">
-  <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn">
-    <img alt="currently jamming to Lofi Beats on Spotify" src="./assets/spotify.svg" />
-  </a>
 </p>
 
 <br />
