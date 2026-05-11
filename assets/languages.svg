@@ -1,10 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="120" viewBox="0 0 540 120" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="142" viewBox="0 0 540 142" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
 .title{fill:#1f2328;font-size:16px;font-weight:600}
 .subtitle{fill:#656d76;font-size:11px}
-@media (prefers-color-scheme: dark){.title{fill:#e6edf3}.subtitle{fill:#8b949e}}
+.lang-name{fill:#1f2328;font-size:12px;font-weight:600}
+.lang-count{fill:#656d76;font-size:11px}
+.lang-pct{fill:#1f2328;font-size:11px;font-weight:600}
+.bar-bg{fill:#ebedf0}
+@media (prefers-color-scheme: dark){
+.title{fill:#e6edf3}.subtitle{fill:#8b949e}.lang-name{fill:#e6edf3}
+.lang-count{fill:#8b949e}.lang-pct{fill:#e6edf3}.bar-bg{fill:#21262d}}
 </style>
 <text x="24" y="38" class="title">📊 Languages by Commits</text>
-<text x="24" y="60" class="subtitle">⏳ Generating — language breakdown will appear after the next workflow run.</text>
-<text x="24" y="80" class="subtitle">This may take ~1 minute on first deploy.</text>
+<text x="24" y="56" class="subtitle">4 commits across 1 language</text>
+<rect x="24" y="68" width="492" height="10" rx="5" class="bar-bg"/>
+<rect x="24" y="68" width="492" height="10" rx="0" fill="#f1e05a"/>
+<circle cx="30" cy="102" r="5" fill="#f1e05a"/>
+<text x="42" y="106" class="lang-name">JavaScript</text>
+<text x="446" y="106" class="lang-count" text-anchor="end">4 commits</text>
+<text x="516" y="106" class="lang-pct" text-anchor="end">100.0%</text>
 </svg>
