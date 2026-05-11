@@ -1,9 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
 .label{fill:#656d76;font-size:11px;font-weight:600;letter-spacing:0.6px;text-transform:uppercase}
-.subtitle{fill:#656d76;font-size:11px}
-@media (prefers-color-scheme: dark){.label{fill:#8b949e}.subtitle{fill:#8b949e}}
+.num{fill:#1a7f37;font-size:42px;font-weight:800;letter-spacing:-1px}
+.num-fire{fill:#FF8C42;font-size:42px;font-weight:800;letter-spacing:-1px}
+.num-text{fill:#1f2328;font-size:32px;font-weight:700;letter-spacing:-0.5px}
+.unit{fill:#656d76;font-size:11px}
+.progress-label{fill:#1f2328;font-size:11px;font-weight:600}
+.progress-pct{fill:#1a7f37;font-size:11px;font-weight:700}
+.bar-bg{fill:#ebedf0}
+.bar-fill{fill:#1a7f37}
+.divider{stroke:#d0d7de;stroke-width:1}
+@media (prefers-color-scheme: dark){
+.label{fill:#8b949e}.num{fill:#39d353}.num-text{fill:#e6edf3}
+.unit{fill:#8b949e}.progress-label{fill:#e6edf3}.progress-pct{fill:#39d353}
+.bar-bg{fill:#21262d}.bar-fill{fill:#39d353}.divider{stroke:#30363d}}
 </style>
-<text x="360" y="60" class="label" text-anchor="middle">⏳ cooking stats... loading after next workflow run</text>
-<text x="360" y="90" class="subtitle" text-anchor="middle">(giving ~1 min)</text>
+<text x="60" y="40" class="label" text-anchor="middle">144 w&apos;s in 2026</text>
+<text x="60" y="85" class="num" text-anchor="middle">144</text>
+<text x="60" y="105" class="unit" text-anchor="middle">total contributions</text>
+<text x="280" y="40" class="label" text-anchor="middle">🔥 on streak rn</text>
+<text x="280" y="85" class="num-fire" text-anchor="middle">3</text>
+<text x="280" y="105" class="unit" text-anchor="middle">days going</text>
+<text x="500" y="40" class="label" text-anchor="middle">📅 peak grind day</text>
+<text x="500" y="85" class="num-text" text-anchor="middle">Sun</text>
+<text x="500" y="105" class="unit" text-anchor="middle">most active</text>
+<text x="60" y="122" class="progress-label">📆 2026 progress</text>
+<text x="660" y="122" class="progress-pct" text-anchor="end">35.6% complete</text>
+<rect x="60" y="128" width="600" height="8" rx="4" class="bar-bg"/>
+<rect x="60" y="128" width="213.4802035388128" height="8" rx="4" class="bar-fill"/>
 </svg>

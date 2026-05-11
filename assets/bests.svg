@@ -1,11 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="130" viewBox="0 0 720 130" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
 .card{fill:#f6f8fa;stroke:#d0d7de;stroke-width:1}
-.subtitle{fill:#656d76;font-size:11px}
-@media (prefers-color-scheme: dark){.card{fill:#161b22;stroke:#30363d}.subtitle{fill:#8b949e}}
+.card-icon{font-size:18px}
+.card-label{fill:#656d76;font-size:10px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase}
+.card-value{fill:#1f2328;font-size:24px;font-weight:800;letter-spacing:-0.5px}
+.card-unit{fill:#656d76;font-size:10px}
+@media (prefers-color-scheme: dark){
+.card{fill:#161b22;stroke:#30363d}.card-label{fill:#8b949e}.card-value{fill:#e6edf3}.card-unit{fill:#8b949e}}
 </style>
-<rect x="16" y="16" width="688" height="98" rx="10" class="card"/>
-<text x="360" y="55" class="subtitle" text-anchor="middle">⏳ cooking personal bests...</text>
-<text x="360" y="78" class="subtitle" text-anchor="middle">best day · best month · record streak · first activity</text>
-<text x="360" y="98" class="subtitle" text-anchor="middle">loading after next workflow run (giving ~1 min)</text>
+<rect x="16" y="16" width="163" height="98" rx="10" class="card"/>
+<text x="30" y="44" class="card-icon">🏆</text>
+<text x="56" y="44" class="card-label">best day</text>
+<text x="30" y="78" class="card-value">32</text>
+<text x="30" y="98" class="card-unit">W&apos;s on May 10</text>
+<rect x="191" y="16" width="163" height="98" rx="10" class="card"/>
+<text x="205" y="44" class="card-icon">📅</text>
+<text x="231" y="44" class="card-label">best month</text>
+<text x="205" y="78" class="card-value">74</text>
+<text x="205" y="98" class="card-unit">in Jan</text>
+<rect x="366" y="16" width="163" height="98" rx="10" class="card"/>
+<text x="380" y="44" class="card-icon">🔥</text>
+<text x="406" y="44" class="card-label">record streak</text>
+<text x="380" y="78" class="card-value">4</text>
+<text x="380" y="98" class="card-unit">days in a row</text>
+<rect x="541" y="16" width="163" height="98" rx="10" class="card"/>
+<text x="555" y="44" class="card-icon">🚀</text>
+<text x="581" y="44" class="card-label">first activity</text>
+<text x="555" y="78" class="card-value">Jan 7</text>
+<text x="555" y="98" class="card-unit">kicked off 2026</text>
 </svg>

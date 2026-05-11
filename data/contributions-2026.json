@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-11T00:43:16.540Z",
+    "generatedAt": "2026-05-11T01:48:39.498Z",
     "year": 2026,
     "login": "sung-jungmin",
     "timezone": "America/New_York"
@@ -8,8 +8,8 @@
   "profile": {
     "name": "Jungmin Sung",
     "login": "sung-jungmin",
-    "avatarUrl": "https://avatars.githubusercontent.com/u/105564849?v=4",
-    "totalContributions": 139
+    "avatarUrl": "https://avatars.githubusercontent.com/u/105564849?u=4cfc86c6de925a47a1919bddc1208e7ace4a5f96&v=4",
+    "totalContributions": 144
   },
   "months": [
     {
@@ -523,7 +523,7 @@
     {
       "month": 5,
       "name": "May",
-      "totalContributions": 49,
+      "totalContributions": 54,
       "days": [
         {
           "date": "2026-05-01",
@@ -563,7 +563,7 @@
         },
         {
           "date": "2026-05-10",
-          "count": 27
+          "count": 32
         },
         {
           "date": "2026-05-11",
@@ -629,6 +629,22 @@
     34,
     1,
     37,
-    39
-  ]
+    44
+  ],
+  "bests": {
+    "bestDay": {
+      "date": "2026-05-10",
+      "count": 32
+    },
+    "bestMonth": {
+      "month": 1,
+      "name": "Jan",
+      "count": 74
+    },
+    "firstActivity": {
+      "date": "2026-01-07",
+      "count": 12
+    }
+  },
+  "yearProgress": 35.58003392313546
 }
