@@ -46,12 +46,12 @@
 
 <br />
 
-## ⏰ My Activity Rhythm — Weekday × Hour
+## 📅 Activity by Day of Week
 
-<sub>When during the week am I most active? Includes <strong>all contribution activity</strong> — commits, issues, PRs, and reviews. Darker cells = more activity in that day/hour bucket (EST).</sub>
+<sub>When during the week am I most active? Counts <strong>every contribution</strong> — commits, issues, PRs, reviews — across <strong>public and private (including organization) repos</strong>. Bucketed by EST weekday.</sub>
 
 <p align="center">
-  <img alt="Heatmap of all contribution activity by day-of-week and hour-of-day in Eastern Time" src="./assets/heatmap.svg" />
+  <img alt="Activity distribution by day of week, including all contribution types and private organization repos" src="./assets/activity.svg" />
 </p>
 
 <br />

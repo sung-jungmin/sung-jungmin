@@ -16,6 +16,31 @@ if (!GITHUB_TOKEN) {
 
 const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
+// Single GraphQL query — contributionCalendar's daily counts already aggregate
+// ALL contribution types (commits, issues, PRs, reviews) across public AND
+// private repos (including organization private). This is the only data source
+// that doesn't require per-repo access permissions.
+const QUERY = `
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    name
+    login
+    avatarUrl
+    contributionsCollection(from: $from, to: $to) {
+      contributionCalendar {
+        totalContributions
+        weeks {
+          contributionDays {
+            date
+            contributionCount
+          }
+        }
+      }
+    }
+  }
+}
+`;
+
 async function graphql(query, variables) {
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
@@ -34,62 +59,6 @@ async function graphql(query, variables) {
     throw new Error(`GraphQL errors: ${JSON.stringify(json.errors)}`);
   }
   return json.data;
-}
-
-// Main query — fetches calendar, commit-repos, and direct contribution timestamps
-// (issues, PRs, reviews) in a single request. Commit timestamps require a second
-// per-repository query because commits aren't returned with timestamps here.
-const QUERY_MAIN = `
-query($login: String!, $from: DateTime!, $to: DateTime!) {
-  user(login: $login) {
-    id
-    name
-    login
-    avatarUrl
-    contributionsCollection(from: $from, to: $to) {
-      contributionCalendar {
-        totalContributions
-        weeks {
-          contributionDays {
-            date
-            contributionCount
-          }
-        }
-      }
-      commitContributionsByRepository(maxRepositories: 50) {
-        repository { owner { login } name }
-      }
-      issueContributions(first: 100) {
-        nodes { occurredAt }
-      }
-      pullRequestContributions(first: 100) {
-        nodes { occurredAt }
-      }
-      pullRequestReviewContributions(first: 100) {
-        nodes { occurredAt }
-      }
-    }
-  }
-}
-`;
-
-function buildHistoryQuery(repoEntries) {
-  const aliases = repoEntries.map((r, i) => {
-    const owner = JSON.stringify(r.repository.owner.login);
-    const name = JSON.stringify(r.repository.name);
-    return `r${i}: repository(owner: ${owner}, name: ${name}) {
-      defaultBranchRef {
-        target {
-          ... on Commit {
-            history(since: $from, until: $to, author: {id: $userId}, first: 100) {
-              nodes { committedDate }
-            }
-          }
-        }
-      }
-    }`;
-  }).join('\n');
-  return `query($userId: ID!, $from: DateTime!, $to: DateTime!) { ${aliases} }`;
 }
 
 function transformMonths(weeks) {
@@ -160,24 +129,22 @@ function calcStreaks(allDays) {
   return { current, currentStart, currentEnd, longest, longestStart, longestEnd };
 }
 
-function calcHeatmap(timestamps) {
-  // 7 rows (Mon=0 .. Sun=6) × 24 hours, bucketed in EST
-  const grid = Array.from({ length: 7 }, () => Array(24).fill(0));
-  const fmt = new Intl.DateTimeFormat('en-US', {
-    timeZone: TIMEZONE, weekday: 'short', hour: 'numeric', hour12: false,
-  });
+function calcWeekdayDistribution(allDays) {
+  // 7 buckets: Mon=0 ... Sun=6 in EST. Uses the same daily counts as the
+  // calendar, so this covers EVERY contribution including private org commits.
+  const buckets = Array(7).fill(0);
+  const fmt = new Intl.DateTimeFormat('en-US', { timeZone: TIMEZONE, weekday: 'short' });
   const weekdayMap = { Mon: 0, Tue: 1, Wed: 2, Thu: 3, Fri: 4, Sat: 5, Sun: 6 };
-  for (const ts of timestamps) {
-    const parts = fmt.formatToParts(new Date(ts));
-    const wkPart = parts.find(p => p.type === 'weekday');
-    const hPart = parts.find(p => p.type === 'hour');
-    if (!wkPart || !hPart) continue;
+  for (const d of allDays) {
+    if (d.count === 0) continue;
+    // Parse date as EST noon to avoid DST boundary ambiguity.
+    const date = new Date(`${d.date}T12:00:00-05:00`);
+    const wkPart = fmt.formatToParts(date).find(p => p.type === 'weekday');
+    if (!wkPart) continue;
     const dow = weekdayMap[wkPart.value];
-    let hour = parseInt(hPart.value, 10);
-    if (hour === 24) hour = 0;
-    if (dow !== undefined && !isNaN(hour)) grid[dow][hour]++;
+    if (dow !== undefined) buckets[dow] += d.count;
   }
-  return grid;
+  return buckets;
 }
 
 async function main() {
@@ -188,46 +155,14 @@ async function main() {
   const now = new Date();
   const to = (now < yearEnd ? now : yearEnd).toISOString();
 
-  // Step 1: main query (calendar + non-commit contribution timestamps + repo list)
-  const data = await graphql(QUERY_MAIN, { login: TARGET_LOGIN, from, to });
+  const data = await graphql(QUERY, { login: TARGET_LOGIN, from, to });
   const user = data.user;
   const cc = user.contributionsCollection;
 
   const months = transformMonths(cc.contributionCalendar.weeks);
   const allDays = flattenDays(months);
   const streak = calcStreaks(allDays);
-
-  // Collect all contribution timestamps: issues + PRs + reviews from main query.
-  const activityTimestamps = [];
-  const issueCount = cc.issueContributions.nodes.length;
-  const prCount = cc.pullRequestContributions.nodes.length;
-  const reviewCount = cc.pullRequestReviewContributions.nodes.length;
-  for (const n of cc.issueContributions.nodes) activityTimestamps.push(n.occurredAt);
-  for (const n of cc.pullRequestContributions.nodes) activityTimestamps.push(n.occurredAt);
-  for (const n of cc.pullRequestReviewContributions.nodes) activityTimestamps.push(n.occurredAt);
-
-  // Step 2: per-repo history query for commit timestamps.
-  let commitCount = 0;
-  const repos = cc.commitContributionsByRepository.filter(r => r.repository && r.repository.owner);
-  if (repos.length > 0) {
-    try {
-      const historyQuery = buildHistoryQuery(repos);
-      const histData = await graphql(historyQuery, { userId: user.id, from, to });
-      for (const key of Object.keys(histData)) {
-        const repo = histData[key];
-        const nodes = repo && repo.defaultBranchRef && repo.defaultBranchRef.target
-          ? repo.defaultBranchRef.target.history.nodes : [];
-        for (const n of nodes) {
-          activityTimestamps.push(n.committedDate);
-          commitCount++;
-        }
-      }
-    } catch (err) {
-      console.error('Warning: commit history query failed:', err.message);
-    }
-  }
-
-  const heatmap = calcHeatmap(activityTimestamps);
+  const weekdayDistribution = calcWeekdayDistribution(allDays);
 
   const output = {
     meta: {
@@ -242,16 +177,9 @@ async function main() {
       avatarUrl: user.avatarUrl,
       totalContributions: cc.contributionCalendar.totalContributions,
     },
-    activitySummary: {
-      commits: commitCount,
-      issues: issueCount,
-      pullRequests: prCount,
-      reviews: reviewCount,
-      bucketed: activityTimestamps.length,
-    },
     months,
     streak,
-    heatmap,
+    weekdayDistribution,
   };
 
   const dataDir = join(ROOT, 'data');
@@ -259,10 +187,10 @@ async function main() {
   const outPath = join(dataDir, 'contributions-2026.json');
   writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8');
 
+  const totalBucketed = weekdayDistribution.reduce((s, v) => s + v, 0);
   console.log(
     `Updated: ${output.profile.totalContributions} contributions · ` +
-    `activity timestamps bucketed: ${activityTimestamps.length} ` +
-    `(commits=${commitCount}, issues=${issueCount}, PRs=${prCount}, reviews=${reviewCount}) · ` +
+    `weekday distribution=[${weekdayDistribution.join(',')}]=${totalBucketed} · ` +
     `streak ${streak.current}/${streak.longest}`
   );
 }

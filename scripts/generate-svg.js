@@ -163,82 +163,90 @@ function generateStreak() {
   return p.join('\n');
 }
 
-// ─────────────────────────── 3. HEATMAP ───────────────────────────
-function generateHeatmap() {
-  const grid = data.heatmap || Array.from({ length: 7 }, () => Array(24).fill(0));
-  const max = Math.max(1, ...grid.flat());
-
-  const PAD = 24;
-  const LABEL_W = 32;
-  const CELL_W = 18, CELL_H = 18, GAP = 3;
-  const HOURS = 24, ROWS = 7;
-  const HEAD_H = 58;
-  const HOUR_HDR_H = 14;
-  const FOOT_H = 26;
-  const WIDTH = PAD + LABEL_W + HOURS * CELL_W + (HOURS - 1) * GAP + PAD;
-  const HEIGHT = PAD + HEAD_H + HOUR_HDR_H + ROWS * CELL_H + (ROWS - 1) * GAP + FOOT_H + PAD;
-
+// ─────────────────────────── 3. WEEKDAY ACTIVITY ───────────────────────────
+function generateActivity() {
   const dayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const dayFull = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const buckets = data.weekdayDistribution || [0,0,0,0,0,0,0];
+  const total = buckets.reduce((s, v) => s + v, 0);
+  const max = Math.max(1, ...buckets);
+
+  const WIDTH = 540;
+  const PAD = 24;
+  const HEAD_H = 56;
+  const ROW_H = 30;
+  const ROWS = 7;
+  const FOOT_H = 24;
+  const HEIGHT = PAD + HEAD_H + ROWS * ROW_H + FOOT_H + PAD;
+
+  const LABEL_W = 42;
+  const COUNT_W = 96;
+  const BAR_LEFT = PAD + LABEL_W;
+  const BAR_AREA = WIDTH - PAD - LABEL_W - COUNT_W - PAD;
+  const BAR_H = 14;
 
   const getLevel = (c) => {
     if (c === 0) return 0;
-    const ratio = c / max;
-    if (ratio <= 0.25) return 1;
-    if (ratio <= 0.50) return 2;
-    if (ratio <= 0.75) return 3;
+    const r = c / max;
+    if (r <= 0.25) return 1;
+    if (r <= 0.50) return 2;
+    if (r <= 0.75) return 3;
     return 4;
   };
+
+  // Find peak day for footer
+  let peakIdx = 0;
+  for (let i = 1; i < 7; i++) if (buckets[i] > buckets[peakIdx]) peakIdx = i;
+  const peakPct = total > 0 ? (buckets[peakIdx] / total) * 100 : 0;
 
   const p = [];
   p.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" font-family="${FONT}">`);
   p.push(`<style>
 .title{fill:#1f2328;font-size:16px;font-weight:600}
 .subtitle{fill:#656d76;font-size:11px}
-.axis{fill:#8b949e;font-size:9px}
-.day-label{fill:#656d76;font-size:11px;font-weight:600}
+.day-label{fill:#1f2328;font-size:12px;font-weight:600}
+.count{fill:#656d76;font-size:11px}
+.pct{fill:#1a7f37;font-size:11px;font-weight:600}
 .foot{fill:#8b949e;font-size:10px}
-.h0{fill:#ebedf0}.h1{fill:#9be9a8}.h2{fill:#40c463}.h3{fill:#30a14e}.h4{fill:#216e39}
+.bar-bg{fill:#ebedf0}
+.b0{fill:#ebedf0}.b1{fill:#9be9a8}.b2{fill:#40c463}.b3{fill:#30a14e}.b4{fill:#216e39}
 @media (prefers-color-scheme: dark){
-.title{fill:#e6edf3}.subtitle{fill:#8b949e}.axis{fill:#6e7681}.day-label{fill:#8b949e}.foot{fill:#6e7681}
-.h0{fill:#161b22}.h1{fill:#0e4429}.h2{fill:#006d32}.h3{fill:#26a641}.h4{fill:#39d353}}
+.title{fill:#e6edf3}.subtitle{fill:#8b949e}.day-label{fill:#e6edf3}
+.count{fill:#8b949e}.pct{fill:#39d353}.foot{fill:#6e7681}.bar-bg{fill:#21262d}
+.b0{fill:#21262d}.b1{fill:#0e4429}.b2{fill:#006d32}.b3{fill:#26a641}.b4{fill:#39d353}}
 </style>`);
 
   // Header
-  const totalActions = grid.flat().reduce((s, v) => s + v, 0);
-  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">⏰ When I'm active · weekday × hour (EST)</text>`);
-  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${totalActions} contribution${totalActions === 1 ? '' : 's'} (commits, issues, PRs, reviews) bucketed by EST day-of-week × hour</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">📅 Activity by Day of Week (EST)</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${total.toLocaleString()} contributions in 2026 (commits, issues, PRs, reviews — includes private org repos)</text>`);
 
-  // Hour labels (show every 3 hours)
-  const gridLeft = PAD + LABEL_W;
-  const gridTop = PAD + HEAD_H + HOUR_HDR_H;
-  for (let h = 0; h < HOURS; h += 3) {
-    const x = gridLeft + h * (CELL_W + GAP) + CELL_W / 2;
-    p.push(`<text x="${x}" y="${PAD + HEAD_H + 10}" class="axis" text-anchor="middle">${h}</text>`);
-  }
-  p.push(`<text x="${gridLeft + HOURS * (CELL_W + GAP) - CELL_W / 2 - GAP}" y="${PAD + HEAD_H + 10}" class="axis" text-anchor="middle">23</text>`);
+  // Rows
+  let y = PAD + HEAD_H;
+  for (let i = 0; i < 7; i++) {
+    const cnt = buckets[i];
+    const pct = total > 0 ? (cnt / total) * 100 : 0;
+    const bw = max > 0 ? (cnt / max) * BAR_AREA : 0;
+    const cy = y + BAR_H + 1;
 
-  // Cells
-  for (let r = 0; r < ROWS; r++) {
-    const y = gridTop + r * (CELL_H + GAP);
-    p.push(`<text x="${gridLeft - 8}" y="${y + CELL_H - 5}" class="day-label" text-anchor="end">${dayNames[r]}</text>`);
-    for (let h = 0; h < HOURS; h++) {
-      const x = gridLeft + h * (CELL_W + GAP);
-      const v = grid[r][h];
-      const lv = getLevel(v);
-      p.push(`<rect x="${x}" y="${y}" width="${CELL_W}" height="${CELL_H}" rx="2" class="h${lv}"><title>${dayNames[r]} ${h}:00 — ${v} contribution${v === 1 ? '' : 's'}</title></rect>`);
+    p.push(`<text x="${PAD + LABEL_W - 8}" y="${cy}" class="day-label" text-anchor="end">${dayNames[i]}</text>`);
+    p.push(`<rect x="${BAR_LEFT}" y="${y + 4}" width="${BAR_AREA}" height="${BAR_H}" rx="3" class="bar-bg"/>`);
+    if (bw > 0.5) {
+      const lv = getLevel(cnt);
+      p.push(`<rect x="${BAR_LEFT}" y="${y + 4}" width="${bw}" height="${BAR_H}" rx="3" class="b${lv}"><title>${dayFull[i]}: ${cnt} contribution${cnt === 1 ? '' : 's'} (${pct.toFixed(1)}%)</title></rect>`);
     }
+    p.push(`<text x="${WIDTH - PAD - 40}" y="${cy}" class="count" text-anchor="end">${cnt}</text>`);
+    p.push(`<text x="${WIDTH - PAD}" y="${cy}" class="pct" text-anchor="end">${pct.toFixed(1)}%</text>`);
+
+    y += ROW_H;
   }
 
-  // Footer legend
-  const footY = gridTop + ROWS * (CELL_H + GAP) + 18;
-  p.push(`<text x="${PAD}" y="${footY}" class="foot">Less</text>`);
-  let lx = PAD + 32;
-  for (let lv = 0; lv <= 4; lv++) {
-    p.push(`<rect x="${lx}" y="${footY - 10}" width="12" height="12" rx="2" class="h${lv}"/>`);
-    lx += 16;
+  // Footer
+  const footY = y + 12;
+  if (total > 0) {
+    p.push(`<text x="${PAD}" y="${footY}" class="foot">📈 Most active: <tspan class="pct">${dayFull[peakIdx]}</tspan> (${peakPct.toFixed(1)}% of all activity)</text>`);
+  } else {
+    p.push(`<text x="${PAD}" y="${footY}" class="foot">No activity yet in 2026.</text>`);
   }
-  p.push(`<text x="${lx + 2}" y="${footY}" class="foot">More</text>`);
-  p.push(`<text x="${WIDTH - PAD}" y="${footY}" class="foot" text-anchor="end">peak: ${max} contribution${max === 1 ? '' : 's'} in one hour</text>`);
 
   p.push('</svg>');
   return p.join('\n');
@@ -248,7 +256,7 @@ function generateHeatmap() {
 const outputs = [
   ['calendar-2026.svg', generateCalendar()],
   ['streak.svg', generateStreak()],
-  ['heatmap.svg', generateHeatmap()],
+  ['activity.svg', generateActivity()],
 ];
 
 for (const [name, svg] of outputs) {
