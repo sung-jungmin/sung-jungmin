@@ -11,7 +11,7 @@
 <rect x="16" y="16" width="163" height="98" rx="10" class="card"/>
 <text x="30" y="44" class="card-icon">🏆</text>
 <text x="56" y="44" class="card-label">best day</text>
-<text x="30" y="78" class="card-value">32</text>
+<text x="30" y="78" class="card-value">41</text>
 <text x="30" y="98" class="card-unit">W&apos;s on May 10</text>
 <rect x="191" y="16" width="163" height="98" rx="10" class="card"/>
 <text x="205" y="44" class="card-icon">📅</text>
@@ -20,9 +20,9 @@
 <text x="205" y="98" class="card-unit">in Jan</text>
 <rect x="366" y="16" width="163" height="98" rx="10" class="card"/>
 <text x="380" y="44" class="card-icon">🔥</text>
-<text x="406" y="44" class="card-label">record streak</text>
+<text x="406" y="44" class="card-label">streak</text>
 <text x="380" y="78" class="card-value">4</text>
-<text x="380" y="98" class="card-unit">days in a row</text>
+<text x="380" y="98" class="card-unit">days max · 🔥 3 active rn</text>
 <rect x="541" y="16" width="163" height="98" rx="10" class="card"/>
 <text x="555" y="44" class="card-icon">🚀</text>
 <text x="581" y="44" class="card-label">first activity</text>

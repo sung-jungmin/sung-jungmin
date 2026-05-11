@@ -15,8 +15,8 @@
 .unit{fill:#8b949e}.progress-label{fill:#e6edf3}.progress-pct{fill:#39d353}
 .bar-bg{fill:#21262d}.bar-fill{fill:#39d353}.divider{stroke:#30363d}}
 </style>
-<text x="60" y="40" class="label" text-anchor="middle">144 w&apos;s in 2026</text>
-<text x="60" y="85" class="num" text-anchor="middle">144</text>
+<text x="60" y="40" class="label" text-anchor="middle">153 w&apos;s in 2026</text>
+<text x="60" y="85" class="num" text-anchor="middle">153</text>
 <text x="60" y="105" class="unit" text-anchor="middle">total contributions</text>
 <text x="280" y="40" class="label" text-anchor="middle">🔥 on streak rn</text>
 <text x="280" y="85" class="num-fire" text-anchor="middle">3</text>
@@ -27,5 +27,5 @@
 <text x="60" y="122" class="progress-label">📆 2026 progress</text>
 <text x="660" y="122" class="progress-pct" text-anchor="end">35.6% complete</text>
 <rect x="60" y="128" width="600" height="8" rx="4" class="bar-bg"/>
-<rect x="60" y="128" width="213.4802035388128" height="8" rx="4" class="bar-fill"/>
+<rect x="60" y="128" width="213.52557509512937" height="8" rx="4" class="bar-fill"/>
 </svg>
