@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <em>🛠 Mostly committing &nbsp;·&nbsp; 🌱 Sometimes shipping &nbsp;·&nbsp; ☕ Always learning</em>
+  <em>🛠 lowkey just commits &nbsp;·&nbsp; 🌱 highkey trying to ship &nbsp;·&nbsp; ☕ always learning fr</em>
 </p>
 
 <p align="center">
@@ -18,40 +18,40 @@
 
 <p align="center">
   <sub>
-    💡 This entire page rebuilds itself every night using real GitHub data — no third-party widgets.
+    💡 this whole page literally rebuilds itself every night from real github data — no third party widgets, just vibes ✨
     <br />
-    All dates and calculations use <strong>Eastern Time (EST)</strong>.
+    all times in <strong>Eastern Time (EST)</strong> bc that's the move
   </sub>
 </p>
 
 <br />
 
-## 📊 My 2026 — A Vertical View
+## 📊 my 2026 · vertical era
 
-<sub>Each row is a month · each cell is a day · darker = more commits.</sub>
+<sub>each row = a month · each cell = a day · darker hits = more commits 💚 iykyk</sub>
 
 <p align="center">
-  <img alt="2026 Contribution Calendar — auto-updated daily" src="./assets/calendar-2026.svg" />
+  <img alt="2026 contribution calendar — auto-updated daily" src="./assets/calendar-2026.svg" />
 </p>
 
 <br />
 
-## 🔥 Streak
+## 🔥 streak check
 
-<sub>Consecutive active days. The flame flickers — and burns longer the more you commit.</sub>
+<sub>consecutive days locked in. the flame hits harder the longer it goes 🥵</sub>
 
 <p align="center">
-  <img alt="Current and longest contribution streaks" src="./assets/streak.svg" />
+  <img alt="current and longest contribution streaks" src="./assets/streak.svg" />
 </p>
 
 <br />
 
-## 📅 Activity by Day of Week
+## 📅 when i actually lock in
 
-<sub>When during the week am I most active? Counts <strong>every contribution</strong> — commits, issues, PRs, reviews — across <strong>public and private (including organization) repos</strong>. Bucketed by EST weekday.</sub>
+<sub>which weekday do i grind hardest? every contribution counted (commits, issues, PRs, reviews) — including private org repos <strong>no cap</strong>. bucketed by EST weekday.</sub>
 
 <p align="center">
-  <img alt="Activity distribution by day of week, including all contribution types and private organization repos" src="./assets/activity.svg" />
+  <img alt="activity distribution by weekday, including private org repos" src="./assets/activity.svg" />
 </p>
 
 <br />
@@ -60,10 +60,10 @@
 
 <p align="center">
   <sub>
-    ✨ Built with <code>GitHub Actions</code> + a tiny Node.js script — <a href="./scripts/">see scripts/</a>
+    ✨ built with <code>GitHub Actions</code> + a tiny node.js script — <a href="./scripts/">see scripts/</a> if ur curious
   </sub>
   <br />
   <sub>
-    ↻ Auto-refreshes daily at <strong>01:00 EST</strong> · zero external services · zero npm dependencies
+    ↻ auto-glows up daily at <strong>01:00 EST</strong> · zero external services · zero npm deps · the cleanest readme fr 💅
   </sub>
 </p>

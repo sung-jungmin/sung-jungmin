@@ -53,8 +53,8 @@ function generateCalendar() {
 .c0{fill:#161b22}.c1{fill:#0e4429}.c2{fill:#006d32}.c3{fill:#26a641}.c4{fill:#39d353}}
 </style>`);
 
-  p.push(`<text x="${PAD}" y="${PAD + 18}" class="title">2026 Contribution Calendar</text>`);
-  p.push(`<text x="${PAD}" y="${PAD + 40}" class="subtitle">${data.profile.totalContributions.toLocaleString()} contributions · @${escapeXml(data.profile.login)}</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 18}" class="title">2026 · vertical lock-in 📅</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 40}" class="subtitle">${data.profile.totalContributions.toLocaleString()} W's · @${escapeXml(data.profile.login)}</text>`);
 
   const dayHdrY = PAD + HEADER_H + 11;
   for (let d = 1; d <= 31; d++) {
@@ -86,7 +86,7 @@ function generateCalendar() {
     month: 'long', day: 'numeric', year: 'numeric',
     timeZone: data.meta.timezone || 'America/New_York',
   });
-  p.push(`<text x="${PAD}" y="${HEIGHT - PAD + 4}" class="muted">↻ Updated ${escapeXml(updated)} (EST) · auto-refreshed daily</text>`);
+  p.push(`<text x="${PAD}" y="${HEIGHT - PAD + 4}" class="muted">↻ glow-up: ${escapeXml(updated)} (EST) · daily refresh fr</text>`);
   p.push('</svg>');
   return p.join('\n');
 }
@@ -147,17 +147,17 @@ function generateStreak() {
 </g>`);
 
   // Current streak text
-  p.push(`<text x="180" y="60" class="label">🔥 Current Streak</text>`);
+  p.push(`<text x="180" y="60" class="label">🔥 on a streak rn</text>`);
   p.push(`<text x="180" y="115" class="big">${s.current}</text>`);
-  p.push(`<text x="180" y="140" class="range">day${s.current === 1 ? '' : 's'} · ${escapeXml(currentRange)}</text>`);
+  p.push(`<text x="180" y="140" class="range">day${s.current === 1 ? '' : 's'} locked in · ${escapeXml(currentRange)}</text>`);
 
   // Divider
   p.push(`<line x1="380" y1="40" x2="380" y2="160" class="divider"/>`);
 
   // ── RIGHT: Longest streak ──
-  p.push(`<text x="405" y="60" class="label">⭐ Longest Streak</text>`);
+  p.push(`<text x="405" y="60" class="label">⭐ peak era</text>`);
   p.push(`<text x="405" y="115" class="medium">${s.longest}</text>`);
-  p.push(`<text x="405" y="140" class="range">day${s.longest === 1 ? '' : 's'} · ${escapeXml(longestRange)}</text>`);
+  p.push(`<text x="405" y="140" class="range">day${s.longest === 1 ? '' : 's'} of cooking · ${escapeXml(longestRange)}</text>`);
 
   p.push('</svg>');
   return p.join('\n');
@@ -217,8 +217,8 @@ function generateActivity() {
 </style>`);
 
   // Header
-  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">📅 Activity by Day of Week (EST)</text>`);
-  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${total.toLocaleString()} contributions in 2026 (commits, issues, PRs, reviews — includes private org repos)</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 14}" class="title">📅 when i actually lock in · EST</text>`);
+  p.push(`<text x="${PAD}" y="${PAD + 32}" class="subtitle">${total.toLocaleString()} W's in 2026 · every contribution counted (private org repos too, no cap)</text>`);
 
   // Rows
   let y = PAD + HEAD_H;
@@ -243,9 +243,9 @@ function generateActivity() {
   // Footer
   const footY = y + 12;
   if (total > 0) {
-    p.push(`<text x="${PAD}" y="${footY}" class="foot">📈 Most active: <tspan class="pct">${dayFull[peakIdx]}</tspan> (${peakPct.toFixed(1)}% of all activity)</text>`);
+    p.push(`<text x="${PAD}" y="${footY}" class="foot">📈 peak grind day: <tspan class="pct">${dayFull[peakIdx]}</tspan> · ${peakPct.toFixed(1)}% of the chaos</text>`);
   } else {
-    p.push(`<text x="${PAD}" y="${footY}" class="foot">No activity yet in 2026.</text>`);
+    p.push(`<text x="${PAD}" y="${footY}" class="foot">no activity yet 💀 it's giving 'just got started'</text>`);
   }
 
   p.push('</svg>');
