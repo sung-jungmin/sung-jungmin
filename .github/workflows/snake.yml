@@ -16,13 +16,13 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate snake SVGs
+      - name: Generate snake SVGs (Anthropic palette)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: sung-jungmin
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.svg?color_snake=%23CC785C&color_dots=%23EEE9DC,%23F0D5B4,%23E5B388,%23CC785C,%23A85A3F
+            dist/github-snake-dark.svg?color_snake=%23E5947A&color_dots=%2326241F,%233D2E22,%237A4A33,%23CC785C,%23E5947A
 
       - name: Push snake assets to output branch
         uses: crazy-max/ghaction-github-pages@v4
