@@ -16,6 +16,12 @@
 
 <br />
 
+<p align="center">
+  <img alt="stats at a glance" src="./assets/stats-hero.svg" />
+</p>
+
+<br />
+
 ## 🔥 streak check
 
 <sub>consecutive days locked in 🥵 · the flame hits harder the longer it goes</sub>
@@ -36,12 +42,46 @@
 
 <br />
 
+## 🐍 the snake era
+
+<sub>watch my commits get devoured · classic move, never gets old</sub>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sung-jungmin/sung-jungmin/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sung-jungmin/sung-jungmin/output/github-snake.svg" />
+    <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/sung-jungmin/sung-jungmin/output/github-snake.svg" />
+  </picture>
+</p>
+
+<br />
+
+## 📈 monthly grind chart
+
+<sub>which months did i go feral · jan→dec at a glance</sub>
+
+<p align="center">
+  <img alt="monthly contribution totals from january to december" src="./assets/monthly.svg" />
+</p>
+
+<br />
+
 ## 📅 when i actually lock in
 
 <sub>which weekday do i grind hardest? every contribution counted (commits + issues + PRs + reviews) — private org repos too, <strong>no cap</strong>. bucketed by EST weekday.</sub>
 
 <p align="center">
   <img alt="activity distribution by weekday, includes all contribution types and private org repos" src="./assets/activity.svg" />
+</p>
+
+<br />
+
+## 🏆 personal bests
+
+<sub>flex zone · the highlights reel of 2026 so far</sub>
+
+<p align="center">
+  <img alt="personal best stats: best day, best month, record streak, first activity" src="./assets/bests.svg" />
 </p>
 
 <br />
