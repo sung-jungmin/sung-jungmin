@@ -1,7 +1,3 @@
-<h1 align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png" width="28" />  
-</h1>
-
 <p align="center">
   <em>🛠 lowkey just commits &nbsp;·&nbsp; 🌱 highkey trying to ship &nbsp;·&nbsp; ☕ always learning fr</em>
 </p>
@@ -17,39 +13,7 @@
 <br />
 
 <p align="center">
-  <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn" target="_blank">
-    <img alt="my coding playlist · click to open in spotify" src="./assets/spotify.svg" />
-  </a>
-</p>
-
-<p align="center">
-  <sub>↗ opens spotify · github readmes can't embed real players (it's a github limitation, not a skill issue 💀)</sub>
-</p>
-
-<br />
-
-<p align="center">
   <img alt="stats at a glance" src="./assets/stats-hero.svg" />
-</p>
-
-<br />
-
-## 🔥 streak check
-
-<sub>consecutive days locked in 🥵 · the flame hits harder the longer it goes</sub>
-
-<p align="center">
-  <img alt="current and longest contribution streaks · animated" src="./assets/streak.svg" />
-</p>
-
-<br />
-
-## 📊 my 2026 · vertical era
-
-<sub>full-year scoreboard 💚 · each row = a month, each cell = a day, darker hits = more commits · iykyk</sub>
-
-<p align="center">
-  <img alt="2026 contribution calendar — vertical layout, auto-updated daily" src="./assets/calendar-2026.svg" />
 </p>
 
 <br />
@@ -64,6 +28,26 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/sung-jungmin/sung-jungmin/output/github-snake.svg" />
     <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/sung-jungmin/sung-jungmin/output/github-snake.svg" />
   </picture>
+</p>
+
+<br />
+
+## 📊 my 2026 · vertical era
+
+<sub>full-year scoreboard 💚 · each row = a month, each cell = a day, darker hits = more commits · iykyk</sub>
+
+<p align="center">
+  <img alt="2026 contribution calendar — vertical layout, auto-updated daily" src="./assets/calendar-2026.svg" />
+</p>
+
+<br />
+
+## 🔥 streak check
+
+<sub>consecutive days locked in 🥵 · the flame hits harder the longer it goes</sub>
+
+<p align="center">
+  <img alt="current and longest contribution streaks · animated" src="./assets/streak.svg" />
 </p>
 
 <br />
