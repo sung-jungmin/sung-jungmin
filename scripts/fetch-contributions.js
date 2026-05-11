@@ -35,11 +35,14 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 `;
 
 const MONTH_NAMES = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const TIMEZONE = 'America/New_York'; // EST/EDT — calendar day boundaries are based on US Eastern Time
 
 async function fetchContributions() {
+  // Year window in Eastern Time (EST = UTC-5).
+  // Jan 1 00:00 EST = Jan 1 05:00 UTC; year end is Jan 1 next year 00:00 EST = Jan 1 next year 05:00 UTC.
+  const from = '2026-01-01T05:00:00Z';
+  const yearEnd = new Date('2027-01-01T05:00:00Z');
   const now = new Date();
-  const from = '2026-01-01T00:00:00Z';
-  const yearEnd = new Date('2026-12-31T23:59:59Z');
   const to = (now < yearEnd ? now : yearEnd).toISOString();
 
   const response = await fetch('https://api.github.com/graphql', {
@@ -103,6 +106,7 @@ function transformToMonths(data) {
       generatedAt: new Date().toISOString(),
       year: 2026,
       login: TARGET_LOGIN,
+      timezone: TIMEZONE,
     },
     profile: {
       name: user.name || user.login,

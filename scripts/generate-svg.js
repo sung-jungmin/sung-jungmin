@@ -120,12 +120,13 @@ function buildSvg() {
     rowTop += ROW_H;
   }
 
-  // Footer
+  // Footer — display "Updated" date in Eastern Time (EST/EDT)
+  const tz = data.meta.timezone || 'America/New_York';
   const updated = new Date(data.meta.generatedAt).toLocaleDateString('en-US', {
-    month: 'long', day: 'numeric', year: 'numeric',
+    month: 'long', day: 'numeric', year: 'numeric', timeZone: tz,
   });
   parts.push(
-    `<text x="${PAD}" y="${HEIGHT - PAD + 4}" class="muted">↻ Updated ${escapeXml(updated)} · auto-refreshed daily</text>`
+    `<text x="${PAD}" y="${HEIGHT - PAD + 4}" class="muted">↻ Updated ${escapeXml(updated)} (EST) · auto-refreshed daily</text>`
   );
 
   parts.push('</svg>');
