@@ -69,6 +69,7 @@ function generateStatsHero() {
 .tick{stroke:#C9C2AB;stroke-width:1}
 .pulse{animation:pulse 2.6s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){.pulse{animation:none}}
 @media (prefers-color-scheme: dark){
 .label{fill:#A19E92}.num{fill:#F0EEE6}.num-coral{fill:#E5947A}.num-text{fill:#F0EEE6}
 .unit{fill:#A19E92}.divider{stroke:#3D3A33}
@@ -478,6 +479,7 @@ function generateBests() {
 .card-icon{font-size:18px}
 .card-icon-pulse{font-size:18px;animation:flicker 1.8s ease-in-out infinite}
 @keyframes flicker{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){.card-icon-pulse{animation:none}}
 .card-label{fill:#5A574E;font-size:10px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase}
 .card-value{fill:#181818;font-size:32px;font-weight:400;letter-spacing:-1px;font-family:${FONT_SERIF}}
 .card-value-coral{fill:#CC785C;font-size:32px;font-weight:400;letter-spacing:-1px;font-family:${FONT_SERIF}}

@@ -1,14 +1,48 @@
 <p align="center">
-  <em>🛠 lowkey just commits &nbsp;·&nbsp; 🌱 highkey trying to ship &nbsp;·&nbsp; ☕ always learning fr</em>
+  <a href="https://github.com/sung-jungmin">
+    <img src="https://github.com/sung-jungmin.png" width="96" height="96" alt="sung-jungmin avatar" style="border-radius:50%" />
+  </a>
+</p>
+
+<h1 align="center">sung-jungmin</h1>
+
+<p align="center">
+  <em>software engineer · most of the code i ship lives behind private org walls · this page shows the public-facing slice</em>
 </p>
 
 <p align="center">
   <a href="https://github.com/sung-jungmin">
-    <img src="https://img.shields.io/badge/profile-sung--jungmin-181818?style=flat-square&logo=github&logoColor=F0EEE6&labelColor=181818" />
+    <img src="https://img.shields.io/badge/github-sung--jungmin-181818?style=flat-square&logo=github&logoColor=F0EEE6&labelColor=181818" />
   </a>
-  <img src="https://img.shields.io/badge/commits-99%25_of_activity-CC785C?style=flat-square&logo=git&logoColor=F0EEE6&labelColor=181818" />
+  <!-- fill in & uncomment when ready:
+  <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/email-reach_out-CC785C?style=flat-square&logo=gmail&logoColor=F0EEE6&labelColor=181818" /></a>
+  <a href="YOUR_LINKEDIN_URL"><img src="https://img.shields.io/badge/linkedin-connect-CC785C?style=flat-square&logo=linkedin&logoColor=F0EEE6&labelColor=181818" /></a>
+  <a href="YOUR_BLOG_URL"><img src="https://img.shields.io/badge/blog-read-CC785C?style=flat-square&logo=substack&logoColor=F0EEE6&labelColor=181818" /></a>
+  -->
   <img src="https://komarev.com/ghpvc/?username=sung-jungmin&label=Profile%20views&color=CC785C&style=flat-square&labelColor=181818" alt="profile views" />
 </p>
+
+<p align="center">
+  <sub>🛠 lowkey just commits &nbsp;·&nbsp; 🌱 highkey trying to ship &nbsp;·&nbsp; ☕ always learning fr</sub>
+</p>
+
+<br />
+
+## 🎯 the actual work
+
+<sub><strong>real talk:</strong> ~99% of my commits live in private org repos · the stats below are just the public tip of the iceberg 🧊</sub>
+<br />
+<sub>scroll up to my <strong>pinned repos</strong> to see what i'm actually building in the open</sub>
+
+<p align="center">
+  <a href="https://github.com/sung-jungmin?tab=repositories">
+    <img src="https://img.shields.io/badge/browse_all_repos-→-CC785C?style=for-the-badge&labelColor=181818" alt="browse repos" />
+  </a>
+</p>
+
+<br />
+
+---
 
 <br />
 
