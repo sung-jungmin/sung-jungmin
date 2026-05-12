@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="376" viewBox="0 0 540 376" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="504" viewBox="0 0 900 504" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
-.title{fill:#181818;font-size:18px;font-weight:400;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif;letter-spacing:-0.3px}
-.subtitle{fill:#5A574E;font-size:11px}
-.day-label{fill:#5A574E;font-size:12px;font-weight:600}
-.day-label-peak{fill:#CC785C;font-size:12px;font-weight:700}
-.count{fill:#5A574E;font-size:11px}
-.pct{fill:#181818;font-size:11px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
-.pct-peak{fill:#CC785C;font-size:11px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
-.foot{fill:#5A574E;font-size:10px}
-.foot-accent{fill:#CC785C;font-size:11px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.title{fill:#181818;font-size:26px;font-weight:400;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif;letter-spacing:-0.4px}
+.subtitle{fill:#5A574E;font-size:14px}
+.day-label{fill:#5A574E;font-size:15px;font-weight:600}
+.day-label-peak{fill:#CC785C;font-size:15px;font-weight:700}
+.count{fill:#5A574E;font-size:14px}
+.pct{fill:#181818;font-size:14px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.pct-peak{fill:#CC785C;font-size:14px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.foot{fill:#5A574E;font-size:13px}
+.foot-accent{fill:#CC785C;font-size:14px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
 .bar-bg{fill:#EEE9DC}
-.avg-line{stroke:#A19E92;stroke-width:1;stroke-dasharray:3 3}
-.peak-ring{fill:none;stroke:#CC785C;stroke-width:1.4}
+.avg-line{stroke:#A19E92;stroke-width:1.2;stroke-dasharray:3 3}
+.peak-ring{fill:none;stroke:#CC785C;stroke-width:1.6}
 .b0{fill:#EEE9DC}.b1{fill:#F0D5B4}.b2{fill:#E5B388}.b3{fill:#CC785C}.b4{fill:#A85A3F}
 @media (prefers-color-scheme: dark){
 .title{fill:#F0EEE6}.subtitle{fill:#A19E92}.day-label{fill:#A19E92}.day-label-peak{fill:#E5947A}
@@ -20,44 +20,44 @@
 .avg-line{stroke:#5A574E}.peak-ring{stroke:#E5947A}
 .b0{fill:#33312B}.b1{fill:#3D2E22}.b2{fill:#7A4A33}.b3{fill:#CC785C}.b4{fill:#E5947A}}
 </style>
-<text x="32" y="48" class="title">when i actually lock in · EST</text>
-<text x="32" y="68" class="subtitle">167 W's in 2026 · all contributions counted (private org repos too, no cap)</text>
-<line x1="217.99489795918367" y1="88" x2="217.99489795918367" y2="318" class="avg-line"><title>even distribution = 14.3% per day</title></line>
-<text x="66" y="109" class="day-label" text-anchor="end">Mon</text>
-<rect x="74" y="96" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="96" width="114.67857142857143" height="16" rx="3" class="b2"><title>Monday: 19 contributions (11.4%)</title></rect>
-<text x="468" y="109" class="count" text-anchor="end">19</text>
-<text x="508" y="109" class="pct" text-anchor="end">11.4%</text>
-<text x="66" y="141" class="day-label" text-anchor="end">Tue</text>
-<rect x="74" y="128" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="128" width="30.17857142857143" height="16" rx="3" class="b1"><title>Tuesday: 5 contributions (3.0%)</title></rect>
-<text x="468" y="141" class="count" text-anchor="end">5</text>
-<text x="508" y="141" class="pct" text-anchor="end">3.0%</text>
-<text x="66" y="173" class="day-label" text-anchor="end">Wed</text>
-<rect x="74" y="160" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="160" width="90.53571428571428" height="16" rx="3" class="b2"><title>Wednesday: 15 contributions (9.0%)</title></rect>
-<text x="468" y="173" class="count" text-anchor="end">15</text>
-<text x="508" y="173" class="pct" text-anchor="end">9.0%</text>
-<text x="66" y="205" class="day-label" text-anchor="end">Thu</text>
-<rect x="74" y="192" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="192" width="205.2142857142857" height="16" rx="3" class="b3"><title>Thursday: 34 contributions (20.4%)</title></rect>
-<text x="468" y="205" class="count" text-anchor="end">34</text>
-<text x="508" y="205" class="pct" text-anchor="end">20.4%</text>
-<text x="66" y="237" class="day-label" text-anchor="end">Fri</text>
-<rect x="74" y="224" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="224" width="6.035714285714286" height="16" rx="3" class="b1"><title>Friday: 1 contribution (0.6%)</title></rect>
-<text x="468" y="237" class="count" text-anchor="end">1</text>
-<text x="508" y="237" class="pct" text-anchor="end">0.6%</text>
-<text x="66" y="269" class="day-label" text-anchor="end">Sat</text>
-<rect x="74" y="256" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="256" width="223.32142857142856" height="16" rx="3" class="b3"><title>Saturday: 37 contributions (22.2%)</title></rect>
-<text x="468" y="269" class="count" text-anchor="end">37</text>
-<text x="508" y="269" class="pct" text-anchor="end">22.2%</text>
-<text x="66" y="301" class="day-label-peak" text-anchor="end">Sun</text>
-<rect x="74" y="288" width="338" height="16" rx="3" class="bar-bg"/>
-<rect x="74" y="288" width="338" height="16" rx="3" class="b4"><title>Sunday: 56 contributions (33.5%)</title></rect>
-<text x="468" y="301" class="count" text-anchor="end">56</text>
-<text x="508" y="301" class="pct-peak" text-anchor="end">33.5%</text>
-<rect x="72.5" y="286.5" width="341" height="19" rx="4" class="peak-ring"/>
-<text x="32" y="334" class="foot">peak grind day: <tspan class="foot-accent">Sunday</tspan> · 33.5% of the chaos · dashed line = even split</text>
+<text x="40" y="62" class="title">when i actually lock in · EST</text>
+<text x="40" y="88" class="subtitle">170 W's in 2026 · all contributions counted (private org repos too, no cap)</text>
+<line x1="368.87755102040813" y1="114" x2="368.87755102040813" y2="432" class="avg-line"><title>even distribution = 14.3% per day</title></line>
+<text x="90" y="148" class="day-label" text-anchor="end">Mon</text>
+<rect x="100" y="126" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="126" width="243.57142857142856" height="24" rx="4" class="b2"><title>Monday: 22 contributions (12.9%)</title></rect>
+<text x="802" y="148" class="count" text-anchor="end">22</text>
+<text x="860" y="148" class="pct" text-anchor="end">12.9%</text>
+<text x="90" y="192" class="day-label" text-anchor="end">Tue</text>
+<rect x="100" y="170" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="170" width="55.35714285714286" height="24" rx="4" class="b1"><title>Tuesday: 5 contributions (2.9%)</title></rect>
+<text x="802" y="192" class="count" text-anchor="end">5</text>
+<text x="860" y="192" class="pct" text-anchor="end">2.9%</text>
+<text x="90" y="236" class="day-label" text-anchor="end">Wed</text>
+<rect x="100" y="214" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="214" width="166.07142857142856" height="24" rx="4" class="b2"><title>Wednesday: 15 contributions (8.8%)</title></rect>
+<text x="802" y="236" class="count" text-anchor="end">15</text>
+<text x="860" y="236" class="pct" text-anchor="end">8.8%</text>
+<text x="90" y="280" class="day-label" text-anchor="end">Thu</text>
+<rect x="100" y="258" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="258" width="376.4285714285714" height="24" rx="4" class="b3"><title>Thursday: 34 contributions (20.0%)</title></rect>
+<text x="802" y="280" class="count" text-anchor="end">34</text>
+<text x="860" y="280" class="pct" text-anchor="end">20.0%</text>
+<text x="90" y="324" class="day-label" text-anchor="end">Fri</text>
+<rect x="100" y="302" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="302" width="11.071428571428571" height="24" rx="4" class="b1"><title>Friday: 1 contribution (0.6%)</title></rect>
+<text x="802" y="324" class="count" text-anchor="end">1</text>
+<text x="860" y="324" class="pct" text-anchor="end">0.6%</text>
+<text x="90" y="368" class="day-label" text-anchor="end">Sat</text>
+<rect x="100" y="346" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="346" width="409.6428571428571" height="24" rx="4" class="b3"><title>Saturday: 37 contributions (21.8%)</title></rect>
+<text x="802" y="368" class="count" text-anchor="end">37</text>
+<text x="860" y="368" class="pct" text-anchor="end">21.8%</text>
+<text x="90" y="412" class="day-label-peak" text-anchor="end">Sun</text>
+<rect x="100" y="390" width="620" height="24" rx="4" class="bar-bg"/>
+<rect x="100" y="390" width="620" height="24" rx="4" class="b4"><title>Sunday: 56 contributions (32.9%)</title></rect>
+<text x="802" y="412" class="count" text-anchor="end">56</text>
+<text x="860" y="412" class="pct-peak" text-anchor="end">32.9%</text>
+<rect x="98" y="388" width="624" height="28" rx="5" class="peak-ring"/>
+<text x="40" y="452" class="foot">peak grind day: <tspan class="foot-accent">Sunday</tspan> · 32.9% of the chaos · dashed line = even split</text>
 </svg>
