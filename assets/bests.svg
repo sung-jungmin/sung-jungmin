@@ -1,33 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="720" height="140" viewBox="0 0 720 140" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="156" viewBox="0 0 720 156" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
 .card{fill:#FAF9F5;stroke:#E0DCC9;stroke-width:1}
+.card-featured{fill:#FAF9F5;stroke:#CC785C;stroke-width:1.5}
+.accent-bar{fill:#CC785C}
 .card-icon{font-size:18px}
-.card-label{fill:#5A574E;font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
-.card-value{fill:#181818;font-size:30px;font-weight:400;letter-spacing:-1px;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
-.card-value-coral{fill:#CC785C;font-size:30px;font-weight:400;letter-spacing:-1px;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.card-icon-pulse{font-size:18px;animation:flicker 1.8s ease-in-out infinite}
+@keyframes flicker{0%,100%{opacity:1}50%{opacity:.55}}
+.card-label{fill:#5A574E;font-size:10px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase}
+.card-value{fill:#181818;font-size:32px;font-weight:400;letter-spacing:-1px;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.card-value-coral{fill:#CC785C;font-size:32px;font-weight:400;letter-spacing:-1px;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
 .card-unit{fill:#5A574E;font-size:10px}
+.divider-thin{stroke:#E0DCC9;stroke-width:1}
 @media (prefers-color-scheme: dark){
 .card{fill:#26241F;stroke:#3D3A33}
-.card-label{fill:#A19E92}.card-value{fill:#F0EEE6}.card-value-coral{fill:#E5947A}.card-unit{fill:#A19E92}}
+.card-featured{fill:#2A2722;stroke:#E5947A}
+.accent-bar{fill:#E5947A}
+.card-label{fill:#A19E92}.card-value{fill:#F0EEE6}.card-value-coral{fill:#E5947A}.card-unit{fill:#A19E92}
+.divider-thin{stroke:#3D3A33}}
 </style>
-<rect x="18" y="18" width="160.5" height="104" rx="12" class="card"/>
-<text x="34" y="48" class="card-icon">🏆</text>
-<text x="62" y="48" class="card-label">best day</text>
-<text x="34" y="90" class="card-value">44</text>
-<text x="34" y="110" class="card-unit">W&apos;s on May 10</text>
-<rect x="192.5" y="18" width="160.5" height="104" rx="12" class="card"/>
-<text x="208.5" y="48" class="card-icon">📅</text>
-<text x="236.5" y="48" class="card-label">best month</text>
-<text x="208.5" y="90" class="card-value">74</text>
-<text x="208.5" y="110" class="card-unit">in Jan</text>
-<rect x="367" y="18" width="160.5" height="104" rx="12" class="card"/>
-<text x="383" y="48" class="card-icon">🔥</text>
-<text x="411" y="48" class="card-label">streak</text>
-<text x="383" y="90" class="card-value-coral">4</text>
-<text x="383" y="110" class="card-unit">days max · 🔥 4 active rn</text>
-<rect x="541.5" y="18" width="160.5" height="104" rx="12" class="card"/>
-<text x="557.5" y="48" class="card-icon">🚀</text>
-<text x="585.5" y="48" class="card-label">first activity</text>
-<text x="557.5" y="90" class="card-value">Jan 7</text>
-<text x="557.5" y="110" class="card-unit">kicked off 2026</text>
+<rect x="18" y="18" width="160.5" height="120" rx="12" class="card"/>
+<text x="34" y="52" class="card-icon">🏆</text>
+<text x="62" y="52" class="card-label">best day</text>
+<line x1="34" y1="62" x2="162.5" y2="62" class="divider-thin"/>
+<text x="34" y="102" class="card-value">44</text>
+<text x="34" y="122" class="card-unit">W&apos;s on May 10</text>
+<rect x="192.5" y="18" width="160.5" height="120" rx="12" class="card"/>
+<text x="208.5" y="52" class="card-icon">📅</text>
+<text x="236.5" y="52" class="card-label">best month</text>
+<line x1="208.5" y1="62" x2="337" y2="62" class="divider-thin"/>
+<text x="208.5" y="102" class="card-value">74</text>
+<text x="208.5" y="122" class="card-unit">in Jan</text>
+<rect x="367" y="18" width="160.5" height="120" rx="12" class="card-featured"/>
+<rect x="379" y="18" width="36" height="3" rx="1.5" class="accent-bar"/>
+<text x="383" y="52" class="card-icon-pulse">🔥</text>
+<text x="411" y="52" class="card-label">streak</text>
+<line x1="383" y1="62" x2="511.5" y2="62" class="divider-thin"/>
+<text x="383" y="102" class="card-value-coral">4</text>
+<text x="383" y="122" class="card-unit">days max · 🔥 4 active rn</text>
+<rect x="541.5" y="18" width="160.5" height="120" rx="12" class="card"/>
+<text x="557.5" y="52" class="card-icon">🚀</text>
+<text x="585.5" y="52" class="card-label">first activity</text>
+<line x1="557.5" y1="62" x2="686" y2="62" class="divider-thin"/>
+<text x="557.5" y="102" class="card-value">Jan 7</text>
+<text x="557.5" y="122" class="card-unit">kicked off 2026</text>
 </svg>

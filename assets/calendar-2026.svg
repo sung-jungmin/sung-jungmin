@@ -1,19 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="368" viewBox="0 0 700 368" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="704" height="394" viewBox="0 0 704 394" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
 <style>
-.title{fill:#181818;font-size:20px;font-weight:400;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif;letter-spacing:-0.5px}
-.subtitle{fill:#CC785C;font-size:13px;font-weight:600}
-.muted{fill:#5A574E;font-size:10px}
+.title{fill:#181818;font-size:22px;font-weight:400;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif;letter-spacing:-0.5px}
+.subtitle{fill:#CC785C;font-size:12px;font-weight:600;letter-spacing:0.3px}
+.muted{fill:#A19E92;font-size:10px}
 .daynum{fill:#A19E92;font-size:9px}
 .month-label{fill:#5A574E;font-size:11px;font-weight:600}
-.month-count{fill:#CC785C;font-size:11px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.month-label-cur{fill:#CC785C;font-size:11px;font-weight:700}
+.month-count{fill:#181818;font-size:11px;font-weight:700;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
+.legend-label{fill:#5A574E;font-size:10px}
+.current-ring{fill:none;stroke:#CC785C;stroke-width:1.4}
 .c0{fill:#EEE9DC}.c1{fill:#F0D5B4}.c2{fill:#E5B388}.c3{fill:#CC785C}.c4{fill:#A85A3F}
 @media (prefers-color-scheme: dark){
-.title{fill:#F0EEE6}.subtitle{fill:#E5947A}.muted{fill:#A19E92}.daynum{fill:#5A574E}
-.month-label{fill:#A19E92}.month-count{fill:#E5947A}
+.title{fill:#F0EEE6}.subtitle{fill:#E5947A}.muted{fill:#5A574E}.daynum{fill:#5A574E}
+.month-label{fill:#A19E92}.month-label-cur{fill:#E5947A}.month-count{fill:#F0EEE6}
+.legend-label{fill:#A19E92}.current-ring{stroke:#E5947A}
 .c0{fill:#26241F}.c1{fill:#3D2E22}.c2{fill:#7A4A33}.c3{fill:#CC785C}.c4{fill:#E5947A}}
 </style>
 <text x="32" y="52" class="title">2026 · vertical lock-in</text>
-<text x="32" y="74" class="subtitle">156 W's · @sung-jungmin</text>
+<text x="32" y="74" class="subtitle">161 W's · @sung-jungmin</text>
 <text x="83" y="103" class="daynum" text-anchor="middle">1</text>
 <text x="168" y="103" class="daynum" text-anchor="middle">6</text>
 <text x="253" y="103" class="daynum" text-anchor="middle">11</text>
@@ -149,7 +153,7 @@
 <rect x="552" y="161" width="14" height="14" rx="2" class="c0"/>
 <rect x="569" y="161" width="14" height="14" rx="2" class="c0"/>
 <text x="606" y="172" class="month-count">3</text>
-<text x="68" y="189" class="month-label" text-anchor="end">May</text>
+<text x="68" y="189" class="month-label-cur" text-anchor="end">▸ May</text>
 <rect x="76" y="178" width="14" height="14" rx="2" class="c0"/>
 <rect x="93" y="178" width="14" height="14" rx="2" class="c0"/>
 <rect x="110" y="178" width="14" height="14" rx="2" class="c0"/>
@@ -160,8 +164,9 @@
 <rect x="195" y="178" width="14" height="14" rx="2" class="c1"/>
 <rect x="212" y="178" width="14" height="14" rx="2" class="c4"/>
 <rect x="229" y="178" width="14" height="14" rx="2" class="c4"/>
-<rect x="246" y="178" width="14" height="14" rx="2" class="c1"/>
-<text x="606" y="189" class="month-count">66</text>
+<rect x="246" y="178" width="14" height="14" rx="2" class="c2"/>
+<rect x="263" y="178" width="14" height="14" rx="2" class="c0"/>
+<text x="606" y="189" class="month-count">71</text>
 <text x="68" y="206" class="month-label" text-anchor="end">Jun</text>
 <text x="68" y="223" class="month-label" text-anchor="end">Jul</text>
 <text x="68" y="240" class="month-label" text-anchor="end">Aug</text>
@@ -169,5 +174,12 @@
 <text x="68" y="274" class="month-label" text-anchor="end">Oct</text>
 <text x="68" y="291" class="month-label" text-anchor="end">Nov</text>
 <text x="68" y="308" class="month-label" text-anchor="end">Dec</text>
-<text x="32" y="340" class="muted">↻ refreshed May 11, 2026 (EST) · daily glow-up</text>
+<text x="76" y="335" class="legend-label">less</text>
+<rect x="108" y="326" width="14" height="14" rx="2" class="c0"/>
+<rect x="126" y="326" width="14" height="14" rx="2" class="c1"/>
+<rect x="144" y="326" width="14" height="14" rx="2" class="c2"/>
+<rect x="162" y="326" width="14" height="14" rx="2" class="c3"/>
+<rect x="180" y="326" width="14" height="14" rx="2" class="c4"/>
+<text x="202" y="335" class="legend-label">more</text>
+<text x="672" y="335" class="muted" text-anchor="end">↻ refreshed May 11, 2026 (EST)</text>
 </svg>
