@@ -6,6 +6,7 @@
 .card-icon{font-size:18px}
 .card-icon-pulse{font-size:18px;animation:flicker 1.8s ease-in-out infinite}
 @keyframes flicker{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){.card-icon-pulse{animation:none}}
 .card-label{fill:#5A574E;font-size:10px;font-weight:600;letter-spacing:1.1px;text-transform:uppercase}
 .card-value{fill:#181818;font-size:32px;font-weight:400;letter-spacing:-1px;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
 .card-value-coral{fill:#CC785C;font-size:32px;font-weight:400;letter-spacing:-1px;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif}
@@ -28,8 +29,8 @@
 <text x="208.5" y="52" class="card-icon">📅</text>
 <text x="236.5" y="52" class="card-label">best month</text>
 <line x1="208.5" y1="62" x2="337" y2="62" class="divider-thin"/>
-<text x="208.5" y="102" class="card-value">74</text>
-<text x="208.5" y="122" class="card-unit">in Jan</text>
+<text x="208.5" y="102" class="card-value">77</text>
+<text x="208.5" y="122" class="card-unit">in May</text>
 <rect x="367" y="18" width="160.5" height="120" rx="12" class="card-featured"/>
 <rect x="379" y="18" width="36" height="3" rx="1.5" class="accent-bar"/>
 <text x="383" y="52" class="card-icon-pulse">🔥</text>

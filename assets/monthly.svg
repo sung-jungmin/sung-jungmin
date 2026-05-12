@@ -18,31 +18,31 @@
 .b0{fill:#33312B}.b1{fill:#3D2E22}.b2{fill:#7A4A33}.b3{fill:#CC785C}.b4{fill:#E5947A}}
 </style>
 <text x="32" y="48" class="title">monthly grind chart</text>
-<text x="32" y="68" class="subtitle">161 W's across the year · longer bar = harder i went</text>
+<text x="32" y="68" class="subtitle">167 W's across the year · longer bar = harder i went</text>
 <line x1="165.5" y1="88" x2="165.5" y2="406" class="gridline"/>
 <line x1="261" y1="88" x2="261" y2="406" class="gridline"/>
 <line x1="356.5" y1="88" x2="356.5" y2="406" class="gridline"/>
 <line x1="452" y1="88" x2="452" y2="406" class="gridline"/>
 <text x="62" y="108" class="month-label" text-anchor="end">Jan</text>
 <rect x="70" y="96" width="382" height="14" rx="3" class="bar-bg"/>
-<rect x="70" y="96" width="382" height="14" rx="3" class="b4"><title>Jan: 74 contributions</title></rect>
+<rect x="70" y="96" width="367.1168831168831" height="14" rx="3" class="b4"><title>Jan: 74 contributions</title></rect>
 <text x="508" y="108" class="count" text-anchor="end">74</text>
 <text x="62" y="134" class="month-label" text-anchor="end">Feb</text>
 <rect x="70" y="122" width="382" height="14" rx="3" class="bar-bg"/>
-<rect x="70" y="122" width="56.78378378378379" height="14" rx="3" class="b1"><title>Feb: 11 contributions</title></rect>
+<rect x="70" y="122" width="54.57142857142857" height="14" rx="3" class="b1"><title>Feb: 11 contributions</title></rect>
 <text x="508" y="134" class="count" text-anchor="end">11</text>
 <text x="62" y="160" class="month-label" text-anchor="end">Mar</text>
 <rect x="70" y="148" width="382" height="14" rx="3" class="bar-bg"/>
-<rect x="70" y="148" width="10.324324324324325" height="14" rx="3" class="b1"><title>Mar: 2 contributions</title></rect>
+<rect x="70" y="148" width="9.922077922077923" height="14" rx="3" class="b1"><title>Mar: 2 contributions</title></rect>
 <text x="508" y="160" class="count" text-anchor="end">2</text>
 <text x="62" y="186" class="month-label" text-anchor="end">Apr</text>
 <rect x="70" y="174" width="382" height="14" rx="3" class="bar-bg"/>
-<rect x="70" y="174" width="15.486486486486488" height="14" rx="3" class="b1"><title>Apr: 3 contributions</title></rect>
+<rect x="70" y="174" width="14.883116883116882" height="14" rx="3" class="b1"><title>Apr: 3 contributions</title></rect>
 <text x="508" y="186" class="count" text-anchor="end">3</text>
 <text x="62" y="212" class="month-label-cur" text-anchor="end">▸ May</text>
 <rect x="70" y="200" width="382" height="14" rx="3" class="bar-bg"/>
-<rect x="70" y="200" width="366.5135135135135" height="14" rx="3" class="b4"><title>May: 71 contributions</title></rect>
-<text x="508" y="212" class="count" text-anchor="end">71</text>
+<rect x="70" y="200" width="382" height="14" rx="3" class="b4"><title>May: 77 contributions</title></rect>
+<text x="508" y="212" class="count" text-anchor="end">77</text>
 <text x="62" y="238" class="month-label" text-anchor="end">Jun</text>
 <rect x="70" y="226" width="382" height="14" rx="3" class="bar-bg"/>
 <text x="508" y="238" class="count" text-anchor="end"></text>
@@ -64,6 +64,6 @@
 <text x="62" y="394" class="month-label" text-anchor="end">Dec</text>
 <rect x="70" y="382" width="382" height="14" rx="3" class="bar-bg"/>
 <text x="508" y="394" class="count" text-anchor="end"></text>
-<rect x="68.5" y="94.5" width="385" height="17" rx="4" class="best-ring"/>
-<text x="32" y="422" class="foot">🏆 cooked the hardest in <tspan class="pct">Jan</tspan> · 74 contributions</text>
+<rect x="68.5" y="198.5" width="385" height="17" rx="4" class="best-ring"/>
+<text x="32" y="422" class="foot">🏆 cooked the hardest in <tspan class="pct">May</tspan> · 77 contributions</text>
 </svg>

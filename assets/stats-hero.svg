@@ -14,6 +14,7 @@
 .tick{stroke:#C9C2AB;stroke-width:1}
 .pulse{animation:pulse 2.6s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media (prefers-reduced-motion: reduce){.pulse{animation:none}}
 @media (prefers-color-scheme: dark){
 .label{fill:#A19E92}.num{fill:#F0EEE6}.num-coral{fill:#E5947A}.num-text{fill:#F0EEE6}
 .unit{fill:#A19E92}.divider{stroke:#3D3A33}
@@ -24,7 +25,7 @@
 <line x1="170" y1="34" x2="170" y2="118" class="divider"/>
 <line x1="390" y1="34" x2="390" y2="118" class="divider"/>
 <text x="60" y="46" class="label" text-anchor="middle">total contributions</text>
-<text x="60" y="96" class="num" text-anchor="middle">161</text>
+<text x="60" y="96" class="num" text-anchor="middle">167</text>
 <text x="60" y="116" class="unit" text-anchor="middle">W&apos;s in 2026 so far</text>
 <text x="280" y="46" class="label" text-anchor="middle">on streak rn</text>
 <text x="280" y="96" class="num-coral pulse" text-anchor="middle">4</text>
@@ -35,9 +36,9 @@
 <line x1="60" y1="134" x2="660" y2="134" class="divider"/>
 <text x="60" y="150" class="progress-label">2026 progress</text>
 <text x="660" y="150" class="progress-pct" text-anchor="end">35.9%</text>
-<text x="360" y="150" class="progress-meta" text-anchor="middle">on pace for ~449 by EOY</text>
+<text x="360" y="150" class="progress-meta" text-anchor="middle">on pace for ~466 by EOY</text>
 <rect x="60" y="156" width="600" height="8" rx="4" class="bar-bg"/>
-<rect x="60" y="156" width="215.10121029299845" height="8" rx="4" class="bar-fill"/>
+<rect x="60" y="156" width="215.1601360540335" height="8" rx="4" class="bar-fill"/>
 <line x1="210" y1="166" x2="210" y2="170" class="tick"/>
 <line x1="360" y1="166" x2="360" y2="170" class="tick"/>
 <line x1="510" y1="166" x2="510" y2="170" class="tick"/>
