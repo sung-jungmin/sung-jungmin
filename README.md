@@ -6,9 +6,13 @@
 
 <h1 align="center">sung-jungmin</h1>
 
+<br />
+
 <p align="center">
-  <em>software engineer · most of the code i ship lives behind private org walls · this page shows the public-facing slice</em>
+  <img alt="lowkey just commits · highkey trying to ship · always learning fr" src="./assets/tagline.svg" width="100%" />
 </p>
+
+<br />
 
 <p align="center">
   <a href="https://github.com/sung-jungmin">
@@ -20,10 +24,6 @@
   <a href="YOUR_BLOG_URL"><img src="https://img.shields.io/badge/blog-read-CC785C?style=flat-square&logo=substack&logoColor=F0EEE6&labelColor=181818" /></a>
   -->
   <img src="https://komarev.com/ghpvc/?username=sung-jungmin&label=Profile%20views&color=CC785C&style=flat-square&labelColor=181818" alt="profile views" />
-</p>
-
-<p align="center">
-  <sub>🛠 lowkey just commits &nbsp;·&nbsp; 🌱 highkey trying to ship &nbsp;·&nbsp; ☕ always learning fr</sub>
 </p>
 
 <br />

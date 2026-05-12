@@ -36,6 +36,38 @@ function currentMonthEst() {
 
 const CUR_MONTH = currentMonthEst();
 
+// ─────────────────────────── -1. TAGLINE HERO ───────────────────────────
+function generateTagline() {
+  const WIDTH = 900, HEIGHT = 280;
+  const cx = WIDTH / 2;
+
+  const p = [];
+  p.push(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" font-family="${FONT_SANS}">`);
+  p.push(`<style>
+.line{fill:#181818;font-size:48px;font-weight:400;font-family:${FONT_SERIF};letter-spacing:-0.6px}
+.sep{fill:#CC785C;font-size:24px}
+.float-a{animation:floatA 4.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.float-b{animation:floatB 5.0s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.float-c{animation:floatC 4.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes floatC{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion: reduce){.float-a,.float-b,.float-c{animation:none}}
+@media (prefers-color-scheme: dark){
+.line{fill:#F0EEE6}.sep{fill:#E5947A}}
+</style>`);
+
+  // Three lines stacked vertically with coral separator dots between
+  p.push(`<g class="float-a"><text x="${cx}" y="68" class="line" text-anchor="middle">🛠 lowkey just commits</text></g>`);
+  p.push(`<text x="${cx}" y="104" class="sep" text-anchor="middle">·</text>`);
+  p.push(`<g class="float-b"><text x="${cx}" y="160" class="line" text-anchor="middle">🌱 highkey trying to ship</text></g>`);
+  p.push(`<text x="${cx}" y="196" class="sep" text-anchor="middle">·</text>`);
+  p.push(`<g class="float-c"><text x="${cx}" y="252" class="line" text-anchor="middle">☕ always learning fr</text></g>`);
+
+  p.push('</svg>');
+  return p.join('\n');
+}
+
 // ─────────────────────────── 0. STATS HERO ───────────────────────────
 function generateStatsHero() {
   const WIDTH = 900, HEIGHT = 230;
@@ -504,6 +536,7 @@ function generateBests() {
 
 // ─────────────────────────── WRITE ALL ───────────────────────────
 const outputs = [
+  ['tagline.svg', generateTagline()],
   ['stats-hero.svg', generateStatsHero()],
   ['calendar-2026.svg', generateCalendar()],
   ['monthly.svg', generateMonthly()],
