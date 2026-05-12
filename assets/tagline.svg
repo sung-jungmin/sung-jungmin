@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" font-family="'Styrene B', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+<style>
+.line{fill:#181818;font-size:48px;font-weight:400;font-family:'Tiempos Headline', 'Source Serif Pro', Georgia, 'Times New Roman', serif;letter-spacing:-0.6px}
+.sep{fill:#CC785C;font-size:24px}
+.float-a{animation:floatA 4.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.float-b{animation:floatB 5.0s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+.float-c{animation:floatC 4.6s ease-in-out infinite;transform-origin:center;transform-box:fill-box}
+@keyframes floatA{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes floatB{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes floatC{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion: reduce){.float-a,.float-b,.float-c{animation:none}}
+@media (prefers-color-scheme: dark){
+.line{fill:#F0EEE6}.sep{fill:#E5947A}}
+</style>
+<g class="float-a"><text x="450" y="68" class="line" text-anchor="middle">🛠 lowkey just commits</text></g>
+<text x="450" y="104" class="sep" text-anchor="middle">·</text>
+<g class="float-b"><text x="450" y="160" class="line" text-anchor="middle">🌱 highkey trying to ship</text></g>
+<text x="450" y="196" class="sep" text-anchor="middle">·</text>
+<g class="float-c"><text x="450" y="252" class="line" text-anchor="middle">☕ always learning fr</text></g>
+</svg>

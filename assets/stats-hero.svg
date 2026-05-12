@@ -25,7 +25,7 @@
 <line x1="300" y1="42" x2="300" y2="146" class="divider"/>
 <line x1="600" y1="42" x2="600" y2="146" class="divider"/>
 <text x="150" y="58" class="label" text-anchor="middle">total contributions</text>
-<text x="150" y="120" class="num" text-anchor="middle">170</text>
+<text x="150" y="120" class="num" text-anchor="middle">171</text>
 <text x="150" y="142" class="unit" text-anchor="middle">W&apos;s in 2026 so far</text>
 <text x="450" y="58" class="label" text-anchor="middle">on streak rn</text>
 <text x="450" y="120" class="num-coral pulse" text-anchor="middle">4</text>
@@ -36,9 +36,9 @@
 <line x1="80" y1="166" x2="820" y2="166" class="divider"/>
 <text x="80" y="188" class="progress-label">2026 progress</text>
 <text x="820" y="188" class="progress-pct" text-anchor="end">35.9%</text>
-<text x="450" y="188" class="progress-meta" text-anchor="middle">on pace for ~474 by EOY</text>
+<text x="450" y="188" class="progress-meta" text-anchor="middle">on pace for ~477 by EOY</text>
 <rect x="80" y="196" width="740" height="10" rx="5" class="bar-bg"/>
-<rect x="80" y="196" width="265.3926944996195" height="10" rx="5" class="bar-fill"/>
+<rect x="80" y="196" width="265.4027835933536" height="10" rx="5" class="bar-fill"/>
 <line x1="265" y1="209" x2="265" y2="214" class="tick"/>
 <line x1="450" y1="209" x2="450" y2="214" class="tick"/>
 <line x1="635" y1="209" x2="635" y2="214" class="tick"/>
