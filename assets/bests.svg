@@ -29,7 +29,7 @@
 <text x="260.5" y="66" class="card-icon">📅</text>
 <text x="296.5" y="66" class="card-label">best month</text>
 <line x1="260.5" y1="78" x2="421" y2="78" class="divider-thin"/>
-<text x="260.5" y="132" class="card-value">81</text>
+<text x="260.5" y="132" class="card-value">82</text>
 <text x="260.5" y="156" class="card-unit">in May</text>
 <rect x="459" y="22" width="200.5" height="156" rx="14" class="card-featured"/>
 <rect x="475" y="22" width="48" height="4" rx="2" class="accent-bar"/>
