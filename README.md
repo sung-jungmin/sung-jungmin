@@ -28,26 +28,8 @@
 
 <br />
 
-## 🎯 the actual work
-
-<sub><strong>real talk:</strong> ~99% of my commits live in private org repos · the stats below are just the public tip of the iceberg 🧊</sub>
-<br />
-<sub>scroll up to my <strong>pinned repos</strong> to see what i'm actually building in the open</sub>
-
 <p align="center">
-  <a href="https://github.com/sung-jungmin?tab=repositories">
-    <img src="https://img.shields.io/badge/browse_all_repos-→-CC785C?style=for-the-badge&labelColor=181818" alt="browse repos" />
-  </a>
-</p>
-
-<br />
-
----
-
-<br />
-
-<p align="center">
-  <img alt="stats at a glance" src="./assets/stats-hero.svg" />
+  <img alt="stats at a glance" src="./assets/stats-hero.svg" width="100%" />
 </p>
 
 <br />
@@ -57,7 +39,7 @@
 <sub>flex zone · the highlights reel of 2026 so far · streak shows max record + current active</sub>
 
 <p align="center">
-  <img alt="personal best stats: best day, best month, streak (record + current), first activity" src="./assets/bests.svg" />
+  <img alt="personal best stats: best day, best month, streak (record + current), first activity" src="./assets/bests.svg" width="100%" />
 </p>
 
 <br />
@@ -81,18 +63,23 @@
 <sub>which weekday do i grind hardest? every contribution counted (commits + issues + PRs + reviews) — private org repos too, <strong>no cap</strong>. bucketed by EST weekday.</sub>
 
 <p align="center">
-  <img alt="activity distribution by weekday, includes all contribution types and private org repos" src="./assets/activity.svg" />
+  <img alt="activity distribution by weekday, includes all contribution types and private org repos" src="./assets/activity.svg" width="100%" />
 </p>
 
 <br />
 
 ## 📊 my 2026 era · two angles
 
-<sub>vertical scoreboard (left) meets monthly bars (right) · same year, two flavors</sub>
+<sub>vertical scoreboard up top · monthly bars right below · same year, two flavors</sub>
 
 <p align="center">
-  <img alt="2026 vertical calendar — day by day, jan to dec" src="./assets/calendar-2026.svg" width="55%" />
-  <img alt="monthly grind chart — month-level totals" src="./assets/monthly.svg" width="40%" />
+  <img alt="2026 vertical calendar — day by day, jan to dec" src="./assets/calendar-2026.svg" width="100%" />
+</p>
+
+<br />
+
+<p align="center">
+  <img alt="monthly grind chart — month-level totals" src="./assets/monthly.svg" width="100%" />
 </p>
 
 <br />
