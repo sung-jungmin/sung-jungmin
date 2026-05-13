@@ -16,7 +16,7 @@
 .c0{fill:#26241F}.c1{fill:#3D2E22}.c2{fill:#7A4A33}.c3{fill:#CC785C}.c4{fill:#E5947A}}
 </style>
 <text x="40" y="66" class="title">2026 · vertical lock-in</text>
-<text x="40" y="92" class="subtitle">181 W's · @sung-jungmin</text>
+<text x="40" y="92" class="subtitle">183 W's · @sung-jungmin</text>
 <text x="105" y="130" class="daynum" text-anchor="middle">1</text>
 <text x="215" y="130" class="daynum" text-anchor="middle">6</text>
 <text x="325" y="130" class="daynum" text-anchor="middle">11</text>
@@ -165,7 +165,8 @@
 <rect x="294" y="226" width="18" height="18" rx="2.5" class="c4"/>
 <rect x="316" y="226" width="18" height="18" rx="2.5" class="c4"/>
 <rect x="338" y="226" width="18" height="18" rx="2.5" class="c3"/>
-<text x="782" y="240" class="month-count">91</text>
+<rect x="360" y="226" width="18" height="18" rx="2.5" class="c0"/>
+<text x="782" y="240" class="month-count">93</text>
 <text x="86" y="262" class="month-label" text-anchor="end">Jun</text>
 <text x="86" y="284" class="month-label" text-anchor="end">Jul</text>
 <text x="86" y="306" class="month-label" text-anchor="end">Aug</text>
@@ -180,5 +181,5 @@
 <rect x="203" y="418" width="18" height="18" rx="2.5" class="c3"/>
 <rect x="226" y="418" width="18" height="18" rx="2.5" class="c4"/>
 <text x="255" y="430" class="legend-label">more</text>
-<text x="860" y="430" class="muted" text-anchor="end">↻ refreshed May 12, 2026 (EST)</text>
+<text x="860" y="430" class="muted" text-anchor="end">↻ refreshed May 13, 2026 (EST)</text>
 </svg>
