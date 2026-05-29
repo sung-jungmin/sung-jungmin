@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-28T09:44:15.439Z",
+    "generatedAt": "2026-05-29T09:34:02.359Z",
     "year": 2026,
     "login": "sung-jungmin",
     "timezone": "America/New_York"
@@ -636,6 +636,10 @@
         {
           "date": "2026-05-28",
           "count": 0
+        },
+        {
+          "date": "2026-05-29",
+          "count": 0
         }
       ]
     },
@@ -714,5 +718,5 @@
       "count": 12
     }
   },
-  "yearProgress": 40.3280550450279
+  "yearProgress": 40.60008358384069
 }
