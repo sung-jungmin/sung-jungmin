@@ -39,11 +39,11 @@
 <rect x="96" y="234" width="688" height="20" rx="4" class="bar-bg"/>
 <rect x="96" y="234" width="22.193548387096772" height="20" rx="4" class="b1"><title>Apr: 3 contributions</title></rect>
 <text x="860" y="252" class="count" text-anchor="end">3</text>
-<text x="86" y="288" class="month-label-cur" text-anchor="end">▸ May</text>
+<text x="86" y="288" class="month-label" text-anchor="end">May</text>
 <rect x="96" y="270" width="688" height="20" rx="4" class="bar-bg"/>
 <rect x="96" y="270" width="688" height="20" rx="4" class="b4"><title>May: 93 contributions</title></rect>
 <text x="860" y="288" class="count" text-anchor="end">93</text>
-<text x="86" y="324" class="month-label" text-anchor="end">Jun</text>
+<text x="86" y="324" class="month-label-cur" text-anchor="end">▸ Jun</text>
 <rect x="96" y="306" width="688" height="20" rx="4" class="bar-bg"/>
 <text x="860" y="324" class="count" text-anchor="end"></text>
 <text x="86" y="360" class="month-label" text-anchor="end">Jul</text>

@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-05-31T08:33:49.482Z",
+    "generatedAt": "2026-06-01T11:07:57.728Z",
     "year": 2026,
     "login": "sung-jungmin",
     "timezone": "America/New_York"
@@ -655,7 +655,12 @@
       "month": 6,
       "name": "Jun",
       "totalContributions": 0,
-      "days": []
+      "days": [
+        {
+          "date": "2026-06-01",
+          "count": 0
+        }
+      ]
     },
     {
       "month": 7,
@@ -726,5 +731,5 @@
       "count": 12
     }
   },
-  "yearProgress": 41.13657243150685
+  "yearProgress": 41.43987102993405
 }
