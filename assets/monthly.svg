@@ -18,7 +18,7 @@
 .b0{fill:#33312B}.b1{fill:#3D2E22}.b2{fill:#7A4A33}.b3{fill:#CC785C}.b4{fill:#E5947A}}
 </style>
 <text x="40" y="62" class="title">monthly grind chart</text>
-<text x="40" y="88" class="subtitle">184 W's across the year · longer bar = harder i went</text>
+<text x="40" y="88" class="subtitle">185 W's across the year · longer bar = harder i went</text>
 <line x1="268" y1="114" x2="268" y2="556" class="gridline"/>
 <line x1="440" y1="114" x2="440" y2="556" class="gridline"/>
 <line x1="612" y1="114" x2="612" y2="556" class="gridline"/>
@@ -45,8 +45,8 @@
 <text x="860" y="288" class="count" text-anchor="end">93</text>
 <text x="86" y="324" class="month-label-cur" text-anchor="end">▸ Jun</text>
 <rect x="96" y="306" width="688" height="20" rx="4" class="bar-bg"/>
-<rect x="96" y="306" width="7.397849462365592" height="20" rx="4" class="b1"><title>Jun: 1 contributions</title></rect>
-<text x="860" y="324" class="count" text-anchor="end">1</text>
+<rect x="96" y="306" width="14.795698924731184" height="20" rx="4" class="b1"><title>Jun: 2 contributions</title></rect>
+<text x="860" y="324" class="count" text-anchor="end">2</text>
 <text x="86" y="360" class="month-label" text-anchor="end">Jul</text>
 <rect x="96" y="342" width="688" height="20" rx="4" class="bar-bg"/>
 <text x="860" y="360" class="count" text-anchor="end"></text>

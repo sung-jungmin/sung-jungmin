@@ -21,8 +21,8 @@
 .b0{fill:#33312B}.b1{fill:#3D2E22}.b2{fill:#7A4A33}.b3{fill:#CC785C}.b4{fill:#E5947A}}
 </style>
 <text x="40" y="62" class="title">when i actually lock in · EST</text>
-<text x="40" y="88" class="subtitle">184 W's in 2026 · all contributions counted (private org repos too, no cap)</text>
-<line x1="391.0204081632653" y1="114" x2="391.0204081632653" y2="432" class="avg-line"><title>even distribution = 14.3% per day</title></line>
+<text x="40" y="88" class="subtitle">185 W's in 2026 · all contributions counted (private org repos too, no cap)</text>
+<line x1="392.6020408163265" y1="114" x2="392.6020408163265" y2="432" class="avg-line"><title>even distribution = 14.3% per day</title></line>
 <text x="90" y="148" class="day-label" text-anchor="end">Mon</text>
 <rect x="100" y="126" width="620" height="24" rx="4" class="bar-bg"/>
 <rect x="100" y="126" width="265.7142857142857" height="24" rx="4" class="b2"><title>Monday: 24 contributions (13.0%)</title></rect>
@@ -30,19 +30,19 @@
 <text x="860" y="148" class="pct" text-anchor="end">13.0%</text>
 <text x="90" y="192" class="day-label" text-anchor="end">Tue</text>
 <rect x="100" y="170" width="620" height="24" rx="4" class="bar-bg"/>
-<rect x="100" y="170" width="177.14285714285714" height="24" rx="4" class="b2"><title>Tuesday: 16 contributions (8.7%)</title></rect>
+<rect x="100" y="170" width="177.14285714285714" height="24" rx="4" class="b2"><title>Tuesday: 16 contributions (8.6%)</title></rect>
 <text x="802" y="192" class="count" text-anchor="end">16</text>
-<text x="860" y="192" class="pct" text-anchor="end">8.7%</text>
+<text x="860" y="192" class="pct" text-anchor="end">8.6%</text>
 <text x="90" y="236" class="day-label" text-anchor="end">Wed</text>
 <rect x="100" y="214" width="620" height="24" rx="4" class="bar-bg"/>
-<rect x="100" y="214" width="166.07142857142856" height="24" rx="4" class="b2"><title>Wednesday: 15 contributions (8.2%)</title></rect>
-<text x="802" y="236" class="count" text-anchor="end">15</text>
-<text x="860" y="236" class="pct" text-anchor="end">8.2%</text>
+<rect x="100" y="214" width="177.14285714285714" height="24" rx="4" class="b2"><title>Wednesday: 16 contributions (8.6%)</title></rect>
+<text x="802" y="236" class="count" text-anchor="end">16</text>
+<text x="860" y="236" class="pct" text-anchor="end">8.6%</text>
 <text x="90" y="280" class="day-label" text-anchor="end">Thu</text>
 <rect x="100" y="258" width="620" height="24" rx="4" class="bar-bg"/>
-<rect x="100" y="258" width="387.5" height="24" rx="4" class="b3"><title>Thursday: 35 contributions (19.0%)</title></rect>
+<rect x="100" y="258" width="387.5" height="24" rx="4" class="b3"><title>Thursday: 35 contributions (18.9%)</title></rect>
 <text x="802" y="280" class="count" text-anchor="end">35</text>
-<text x="860" y="280" class="pct" text-anchor="end">19.0%</text>
+<text x="860" y="280" class="pct" text-anchor="end">18.9%</text>
 <text x="90" y="324" class="day-label" text-anchor="end">Fri</text>
 <rect x="100" y="302" width="620" height="24" rx="4" class="bar-bg"/>
 <rect x="100" y="302" width="11.071428571428571" height="24" rx="4" class="b1"><title>Friday: 1 contribution (0.5%)</title></rect>
@@ -50,14 +50,14 @@
 <text x="860" y="324" class="pct" text-anchor="end">0.5%</text>
 <text x="90" y="368" class="day-label" text-anchor="end">Sat</text>
 <rect x="100" y="346" width="620" height="24" rx="4" class="bar-bg"/>
-<rect x="100" y="346" width="409.6428571428571" height="24" rx="4" class="b3"><title>Saturday: 37 contributions (20.1%)</title></rect>
+<rect x="100" y="346" width="409.6428571428571" height="24" rx="4" class="b3"><title>Saturday: 37 contributions (20.0%)</title></rect>
 <text x="802" y="368" class="count" text-anchor="end">37</text>
-<text x="860" y="368" class="pct" text-anchor="end">20.1%</text>
+<text x="860" y="368" class="pct" text-anchor="end">20.0%</text>
 <text x="90" y="412" class="day-label-peak" text-anchor="end">Sun</text>
 <rect x="100" y="390" width="620" height="24" rx="4" class="bar-bg"/>
-<rect x="100" y="390" width="620" height="24" rx="4" class="b4"><title>Sunday: 56 contributions (30.4%)</title></rect>
+<rect x="100" y="390" width="620" height="24" rx="4" class="b4"><title>Sunday: 56 contributions (30.3%)</title></rect>
 <text x="802" y="412" class="count" text-anchor="end">56</text>
-<text x="860" y="412" class="pct-peak" text-anchor="end">30.4%</text>
+<text x="860" y="412" class="pct-peak" text-anchor="end">30.3%</text>
 <rect x="98" y="388" width="624" height="28" rx="5" class="peak-ring"/>
-<text x="40" y="452" class="foot">peak grind day: <tspan class="foot-accent">Sunday</tspan> · 30.4% of the chaos · dashed line = even split</text>
+<text x="40" y="452" class="foot">peak grind day: <tspan class="foot-accent">Sunday</tspan> · 30.3% of the chaos · dashed line = even split</text>
 </svg>
