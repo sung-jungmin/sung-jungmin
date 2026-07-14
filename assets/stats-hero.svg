@@ -35,10 +35,10 @@
 <text x="750" y="142" class="unit" text-anchor="middle">most active weekday</text>
 <line x1="80" y1="166" x2="820" y2="166" class="divider"/>
 <text x="80" y="188" class="progress-label">2026 progress</text>
-<text x="820" y="188" class="progress-pct" text-anchor="end">52.9%</text>
-<text x="450" y="188" class="progress-meta" text-anchor="middle">on pace for ~350 by EOY</text>
+<text x="820" y="188" class="progress-pct" text-anchor="end">53.2%</text>
+<text x="450" y="188" class="progress-meta" text-anchor="middle">on pace for ~348 by EOY</text>
 <rect x="80" y="196" width="740" height="10" rx="5" class="bar-bg"/>
-<rect x="80" y="196" width="391.60673236047694" height="10" rx="5" class="bar-fill"/>
+<rect x="80" y="196" width="393.5485763425926" height="10" rx="5" class="bar-fill"/>
 <line x1="265" y1="209" x2="265" y2="214" class="tick"/>
 <line x1="450" y1="209" x2="450" y2="214" class="tick"/>
 <line x1="635" y1="209" x2="635" y2="214" class="tick"/>
