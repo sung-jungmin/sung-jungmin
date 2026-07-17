@@ -234,6 +234,7 @@
 <rect x="382" y="270" width="18" height="18" rx="2.5" class="c0"/>
 <rect x="404" y="270" width="18" height="18" rx="2.5" class="c1"/>
 <rect x="426" y="270" width="18" height="18" rx="2.5" class="c0"/>
+<rect x="448" y="270" width="18" height="18" rx="2.5" class="c0"/>
 <text x="782" y="284" class="month-count">3</text>
 <text x="86" y="306" class="month-label" text-anchor="end">Aug</text>
 <text x="86" y="328" class="month-label" text-anchor="end">Sep</text>
@@ -247,5 +248,5 @@
 <rect x="203" y="418" width="18" height="18" rx="2.5" class="c3"/>
 <rect x="226" y="418" width="18" height="18" rx="2.5" class="c4"/>
 <text x="255" y="430" class="legend-label">more</text>
-<text x="860" y="430" class="muted" text-anchor="end">↻ refreshed July 16, 2026 (EST)</text>
+<text x="860" y="430" class="muted" text-anchor="end">↻ refreshed July 17, 2026 (EST)</text>
 </svg>
