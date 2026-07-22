@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-07-21T08:06:22.768Z",
+    "generatedAt": "2026-07-22T08:07:00.959Z",
     "year": 2026,
     "login": "sung-jungmin",
     "timezone": "America/New_York"
@@ -9,7 +9,7 @@
     "name": "Jungmin Sung",
     "login": "sung-jungmin",
     "avatarUrl": "https://avatars.githubusercontent.com/u/105564849?u=4cfc86c6de925a47a1919bddc1208e7ace4a5f96&v=4",
-    "totalContributions": 195
+    "totalContributions": 197
   },
   "months": [
     {
@@ -781,7 +781,7 @@
     {
       "month": 7,
       "name": "Jul",
-      "totalContributions": 10,
+      "totalContributions": 12,
       "days": [
         {
           "date": "2026-07-01",
@@ -865,6 +865,10 @@
         },
         {
           "date": "2026-07-21",
+          "count": 2
+        },
+        {
+          "date": "2026-07-22",
           "count": 0
         }
       ]
@@ -901,16 +905,16 @@
     }
   ],
   "streak": {
-    "current": 1,
+    "current": 2,
     "currentStart": "2026-07-20",
-    "currentEnd": "2026-07-20",
+    "currentEnd": "2026-07-21",
     "longest": 5,
     "longestStart": "2026-05-08",
     "longestEnd": "2026-05-12"
   },
   "weekdayDistribution": [
     26,
-    16,
+    18,
     19,
     35,
     1,
@@ -932,5 +936,5 @@
       "count": 12
     }
   },
-  "yearProgress": 55.1039534753932
+  "yearProgress": 55.37804718099949
 }
