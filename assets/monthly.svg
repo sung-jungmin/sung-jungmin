@@ -47,11 +47,11 @@
 <rect x="96" y="306" width="688" height="20" rx="4" class="bar-bg"/>
 <rect x="96" y="306" width="14.795698924731184" height="20" rx="4" class="b1"><title>Jun: 2 contributions</title></rect>
 <text x="860" y="324" class="count" text-anchor="end">2</text>
-<text x="86" y="360" class="month-label-cur" text-anchor="end">▸ Jul</text>
+<text x="86" y="360" class="month-label" text-anchor="end">Jul</text>
 <rect x="96" y="342" width="688" height="20" rx="4" class="bar-bg"/>
 <rect x="96" y="342" width="103.56989247311829" height="20" rx="4" class="b1"><title>Jul: 14 contributions</title></rect>
 <text x="860" y="360" class="count" text-anchor="end">14</text>
-<text x="86" y="396" class="month-label" text-anchor="end">Aug</text>
+<text x="86" y="396" class="month-label-cur" text-anchor="end">▸ Aug</text>
 <rect x="96" y="378" width="688" height="20" rx="4" class="bar-bg"/>
 <text x="860" y="396" class="count" text-anchor="end"></text>
 <text x="86" y="432" class="month-label" text-anchor="end">Sep</text>
