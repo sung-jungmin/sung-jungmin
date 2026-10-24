@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-23T10:40:53.738Z",
+    "generatedAt": "2026-10-24T09:57:53.445Z",
     "year": 2026,
     "login": "sung-jungmin",
     "timezone": "America/New_York"
@@ -1263,6 +1263,10 @@
         {
           "date": "2026-10-23",
           "count": 0
+        },
+        {
+          "date": "2026-10-24",
+          "count": 0
         }
       ]
     },
@@ -1280,9 +1284,9 @@
     }
   ],
   "streak": {
-    "current": 1,
-    "currentStart": "2026-10-22",
-    "currentEnd": "2026-10-22",
+    "current": 0,
+    "currentStart": null,
+    "currentEnd": null,
     "longest": 5,
     "longestStart": "2026-05-08",
     "longestEnd": "2026-05-12"
@@ -1311,5 +1315,5 @@
       "count": 12
     }
   },
-  "yearProgress": 80.88677618594622
+  "yearProgress": 81.15256673325723
 }
