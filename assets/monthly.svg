@@ -57,11 +57,11 @@
 <text x="86" y="432" class="month-label" text-anchor="end">Sep</text>
 <rect x="96" y="414" width="688" height="20" rx="4" class="bar-bg"/>
 <text x="860" y="432" class="count" text-anchor="end"></text>
-<text x="86" y="468" class="month-label-cur" text-anchor="end">▸ Oct</text>
+<text x="86" y="468" class="month-label" text-anchor="end">Oct</text>
 <rect x="96" y="450" width="688" height="20" rx="4" class="bar-bg"/>
 <rect x="96" y="450" width="22.193548387096772" height="20" rx="4" class="b1"><title>Oct: 3 contributions</title></rect>
 <text x="860" y="468" class="count" text-anchor="end">3</text>
-<text x="86" y="504" class="month-label" text-anchor="end">Nov</text>
+<text x="86" y="504" class="month-label-cur" text-anchor="end">▸ Nov</text>
 <rect x="96" y="486" width="688" height="20" rx="4" class="bar-bg"/>
 <text x="860" y="504" class="count" text-anchor="end"></text>
 <text x="86" y="540" class="month-label" text-anchor="end">Dec</text>
