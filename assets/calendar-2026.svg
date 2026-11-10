@@ -356,6 +356,7 @@
 <rect x="228" y="358" width="18" height="18" rx="2.5" class="c0"/>
 <rect x="250" y="358" width="18" height="18" rx="2.5" class="c0"/>
 <rect x="272" y="358" width="18" height="18" rx="2.5" class="c0"/>
+<rect x="294" y="358" width="18" height="18" rx="2.5" class="c0"/>
 <text x="86" y="394" class="month-label" text-anchor="end">Dec</text>
 <text x="96" y="430" class="legend-label">less</text>
 <rect x="134" y="418" width="18" height="18" rx="2.5" class="c0"/>
@@ -364,5 +365,5 @@
 <rect x="203" y="418" width="18" height="18" rx="2.5" class="c3"/>
 <rect x="226" y="418" width="18" height="18" rx="2.5" class="c4"/>
 <text x="255" y="430" class="legend-label">more</text>
-<text x="860" y="430" class="muted" text-anchor="end">↻ refreshed November 9, 2026 (EST)</text>
+<text x="860" y="430" class="muted" text-anchor="end">↻ refreshed November 10, 2026 (EST)</text>
 </svg>
